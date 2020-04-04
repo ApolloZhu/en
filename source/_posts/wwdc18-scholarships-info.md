@@ -9,6 +9,8 @@ categories:
 - Programming
 ---
 
+> [阅读中文版本](/2018/03/15/wwdc18-scholarships-info/)
+
 <details>
 <summary>Wait, before we start, what is WWDC?</summary>
 
