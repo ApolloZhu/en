@@ -8,8 +8,6 @@ date: 2017-12-26 11:10:32
 - [LiulietLee](https://space.bilibili.com/4056345/)
 - [Captain 雪ノ下八幡's blog](https://www.tcwq.tech)
 - [兔子鲜笙的博客](https://blog.tuzi.moe/)
-- [QPomelo's Weblog](https://qpomelo.app/)
-- [SHALL WE TALK](http://shallweitalk.com)
 
 ## GitHub
 
