@@ -44,9 +44,8 @@ So I went back to Oakton High School after graduation to pick up my Cyber Securi
 
 ```sml
 fun fact(x : int) =
-    if x < 2
-    then 1
-    else x * fact(x - 1)
+    if x < 2 then 1 else x * fact(x - 1)
+    (* TODO: tail recursion *)
 ```
 
 Well, not that kind of `fun fact`. But you probably wanna ask me, "why Apollonian?" During the first year of my middle school, I tried to manually copy all CS related terms from the New Oxford American Dictionary to a notebook. I discovered the word "Apollonian," thought about what my name "Apollo" means, and kept it to remind me the person I shall become. (You might see me using the variant ending in nyan 🐾, too).
