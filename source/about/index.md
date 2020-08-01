@@ -10,6 +10,8 @@ keywords:
 - Apollonyan
 ---
 
+Sophomore at Paul G. Allen School of Computer Science and Engineering.
+
 ## Awards
 
 |Date|Name|Kind|
@@ -38,7 +40,7 @@ So I went back to Oakton High School after graduation to pick up my Cyber Securi
 
 > I taught Apollo his freshman year in programming. It was very evident even then that he was an incredibly intelligent and special student. A memory that has stuck with me from that year, is he took a huge text book of Microsoft Visual Basic home to learn on this own without prompting! He is a student that strives to continue his learning as well as be a wonderful individual outside of his academic talents. Big things are in his future! I am honored to have been part of his journey.
 
-> Apollo is an incredibility talented person whose academic achievement is remarkable. In the three years I have known him, he has never failed to impress me with his drive and knowledge. Apollos is also one of the kindest and most respectful students I have ever had in my classroom and will go out of his way to mentor other students.
+> Apollo is an incredibility talented person whose academic achievement is remarkable. In the three years I have known him, he has never failed to impress me with his drive and knowledge. Apollo is also one of the kindest and most respectful students I have ever had in my classroom and will go out of his way to mentor other students.
 
 ## Fun Fact
 
