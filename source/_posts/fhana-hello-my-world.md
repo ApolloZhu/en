@@ -5,7 +5,6 @@ tags:
 - anime
 - music
 - Java
-- translation
 categories:
 - Programming
 ---

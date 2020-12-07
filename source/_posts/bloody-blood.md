@@ -3,7 +3,6 @@ title: Near & Blood
 date: 2017-03-24 10:05:39
 tags:
 - literature
-- translation
 categories:
 - Memex
 ---

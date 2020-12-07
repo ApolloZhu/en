@@ -50,10 +50,10 @@ darkmode: true
 # ---------------------------------------------------------------
 
 favicon:
-  small: https://avatars3.githubusercontent.com/u/10842684
-  medium: https://avatars3.githubusercontent.com/u/10842684
-  apple_touch_icon: https://avatars3.githubusercontent.com/u/10842684
-  safari_pinned_tab: https://avatars3.githubusercontent.com/u/10842684
+  small: https://github.com/ApolloZhu.png
+  medium: https://github.com/ApolloZhu.png
+  apple_touch_icon: https://github.com/ApolloZhu.png
+  safari_pinned_tab: https://github.com/ApolloZhu.png
   #android_manifest: /manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist)
@@ -127,7 +127,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://avatars3.githubusercontent.com/u/10842684
+  url: https://github.com/ApolloZhu.png
   # If true, the avatar will be dispalyed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
