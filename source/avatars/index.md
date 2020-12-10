@@ -17,7 +17,5 @@ This morphs the Chinese character 福 (upside down) into my initials (AZ). Took 
 I happened to learn how to make Neon effect in computer graphics class. But unfortunately, me winning their [Scholarships](https://developer.apple.com/wwdc19/scholarships/) that year didn't happen. {% endnote %} |
 | ![Christmas](https://0.gravatar.com/userimage/102369060/05c1c03e86fc67e97254865522bd104a?size=400)| {% note danger %} #### 2019/12/18 | Christmas
 Back in 2017 people were putting xmas hats on their avatars, so I made one with fluffy xmas hat. But it didn't look that well, so I made this one in Keynote using their shapes library. {% endnote %} |
-| ![PornHub](https://2.gravatar.com/userimage/102369060/6546a6c107774206bdb5adb2013b2235?size=400)| {% note warning %} #### 2020/03/27 | Stayhome hub
-Due to COVID-19 Coronavirus, they made pro accounts free. My username was taken so I had to use [Apollonyan](https://www.pornhub.com/users/apollonyan). Not that I'm gonna use the account or anything; My fear is for someone using my name to do bad things. {% endnote %} |
 | ![Pride](https://2.gravatar.com/userimage/102369060/1095e598c5f595819cff42f5d4e47157?size=400)| {% note success %} #### 2020/06/01 | Pride 🏳️‍🌈
 So this is my second attempt. I tried to make one of these on my birthday 2 years ago, but the result didn't turn out too well. Though I like this sticker kind of look and feel, will probably release a better design in the future. {% endnote %} |
