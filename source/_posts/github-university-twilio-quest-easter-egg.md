@@ -19,9 +19,11 @@ I wanted the adorable [Octoplush](https://github.myshopify.com/products/octoplus
 
 ## A "Slight" Detour
 
-Since the hint is "hit the nail on the head," I believe a lot of people have tried to "hit" everything that has even just the slightest connection to either "nail" or "head". Me too. I spent countless hours trying to click the head of the 2 people in the welcome screen, that of robot Cederic, the head of the Operator, and many other places. Yet, none of those worked.
+Since the hint is "hit the nail on the head," I believe a lot of people have tried to "hit" everything that has even just the slightest connection to either "nail" or "head".
 
-Well, time to try reverse engineering, let's see if the source code of the app can tell us something.
+Me too. I spent countless hours trying to click the head of the 2 people in the welcome screen, that of robot Cederic, the head of the Operator, and many other places. Yet, none of those worked.
+
+Well, time to try reverse engineering. Let's see if the source code of the app can tell us something.
 
 {% note danger %}
 Note: make sure you are allowed to do this by the Terms of Service / End User License Agreement.
@@ -35,11 +37,11 @@ For easter eggs/hidden features, the words that I usually start to look for in s
 
 ## "Nail" in the `head`
 
-We must be doing something wrong. Since Ekansh Gupta mentioned about opening TwilioQuest source code on Slack, we're probably in the right place. But we've spent too much time looking for the clue, how could Vicdoja solve the puzzle in less than an hour after receiving the hint on Slack? It must be something that's directly related to the hint, something obvious that we've ignored so far.
+When I checked the [modification history of the README.md file](https://github.com/education/github-university-2020/commits/main/README.md) (to see if they have accidentally leaked something), a version of it said that "the game will let you know if you've qualified!" So I assumed that this must be a feature in the TwilioQuest app itself, revealed by some kind of JavaScript code / hidden chests / etc....
 
-Well, indeed there was. When I checked the [modification history of the README.md file](https://github.com/education/github-university-2020/commits/main/README.md) (to see if they have accidentally leaked something), a version of it said that "the game will let you know if you've qualified!" So I assumed that this must be a feature in the TwilioQuest app itself, revealed by some kind of JavaScript code / hidden chests / etc....
+But what if it is not? Since Ekansh Gupta mentioned about opening TwilioQuest source code on Slack, we're probably in the right place. But we've spent too much time looking for the clue, how could Vicdoja solve the puzzle in less than an hour after receiving the hint on Slack? It must be something that's directly related to the hint, something obvious that we've been ignoring.
 
-But what if it is not? There's something that we've ignored so far: the `head` HTML tag seen in the first screenshot. Because there's no "code" in the `head` tag, I never considered it to be the head that I was looking for. With no where else to examine, I expanded the `head` tag by clicking that triangle to its left:
+Well, indeed there was. There's something that we've ignored so far: the `head` HTML tag seen in the first screenshot. Because there's no "code" in the `head` tag, I never considered it to be the head that I was looking for. With no where else to examine, I expanded the `head` tag by clicking that triangle to its left:
 
 ![There's a comment saying follow the white rabbit with a link to GitHub gists](https://user-images.githubusercontent.com/10842684/101842641-7a2cae80-3b16-11eb-823d-b4251724b0d8.png)
 
@@ -49,7 +51,7 @@ We finally hit the nail on the head and can "follow the white rabbit" to continu
 
 <script src="https://gist.github.com/kwhinnery/b3cbc250fa1df65cc3c36ca39495d486.js"></script>
 
-The file is named "egg.md" and the description says "GitHub Univers(ity)," indeed this is the easter egg that we've been looking for. But what could this long line of cryptic text possibly mean?
+The file is named "[egg.md](https://gist.github.com/kwhinnery/b3cbc250fa1df65cc3c36ca39495d486)" and the description says "GitHub Univers(ity)," indeed this is the easter egg that we've been looking for. But what could this long line of cryptic text possibly mean?
 
 If you scroll to the end of the line, you'll see "`==`". That's a classic sign of Base64 encoded text, so I just searched for an online Base64 decoder and decoded this weird line of characters, yielding:
 
