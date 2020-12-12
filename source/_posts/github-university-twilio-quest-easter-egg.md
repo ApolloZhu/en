@@ -39,7 +39,7 @@ For easter eggs/hidden features, the words that I usually start to look for in s
 
 When I checked the [modification history of the README.md file](https://github.com/education/github-university-2020/commits/main/README.md) (to see if they have accidentally leaked something), a version of it said that "the game will let you know if you've qualified!" So I assumed that this must be a feature in the TwilioQuest app itself, revealed by some kind of JavaScript code / hidden chests / etc....
 
-But what if it is not? Since Ekansh Gupta mentioned about opening TwilioQuest source code on Slack, we're probably in the right place. But we've spent too much time looking for the clue, how could Vicdoja solve the puzzle in less than an hour after receiving the hint on Slack? It must be something that's directly related to the hint, something obvious that we've been ignoring.
+But what if it is not? Since [Ekansh Gupta](https://twitter.com/ekuekanshgupta) mentioned about opening TwilioQuest source code on Slack, we're probably in the right place. But we've spent too much time looking for the clue, how could Vicdoja solve the puzzle in less than an hour after receiving the hint on Slack? It must be something that's directly related to the hint, something obvious that we've been ignoring.
 
 Well, indeed there was. There's something that we've ignored so far: the `head` HTML tag seen in the first screenshot. Because there's no "code" in the `head` tag, I never considered it to be the head that I was looking for. With no where else to examine, I expanded the `head` tag by clicking that triangle to its left:
 
