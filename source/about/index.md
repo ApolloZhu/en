@@ -16,11 +16,12 @@ Sophomore at Paul G. Allen School of Computer Science and Engineering.
 
 |Date|Name|Kind|
 |--|--|--|
+|6/1/2021|WWDC 2021 Swift Student Challenge||
 |10/13/2019|DubHacks 2019|[Classic Track Top 3 Finalists](https://twitter.com/dubhacks/status/1183494524753960960?s=21)|
-|4/20/2018|WWDC 2018|Scholarship|
+|4/20/2018|WWDC 2018 Scholarship||
 |3/25/2018|Hack.UVA 2018|Winner - Best Use of SafeTrek API|
 |5/18/2017|2017 ACSL Intermediate-3 Division|All-Star Contest qualified|
-|4/21/2017|WWDC 2017|Scholarship|
+|4/21/2017|WWDC 2017 Scholarship||
 |4/8/2017|2017 FBLA State Mobile App Dev|Virginia 2nd|
 |3/2/2017|2017 FBLA Regional Mobile App Dev|Northern Virginia 1st|
 |3/2/2017|2017 AMC 10|AIME 10|
