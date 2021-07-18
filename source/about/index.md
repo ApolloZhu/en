@@ -10,13 +10,14 @@ keywords:
 - Apollonyan
 ---
 
-Sophomore at Paul G. Allen School of Computer Science and Engineering.
+Junior at Paul G. Allen School of Computer Science and Engineering (and pursuing a Master's degree in Senior year).
 
 ## Awards
 
 |Date|Name|Kind|
 |--|--|--|
 |6/1/2021|WWDC 2021 Swift Student Challenge||
+|9/13/2020|Building for Digital Health|[Best CardinalKit App](https://youtu.be/7D2vPd771bk?t=873), [COVID-19 hackathon fund](https://events.withgoogle.com/demo-week-hackathon-fund/) |
 |10/13/2019|DubHacks 2019|[Classic Track Top 3 Finalists](https://twitter.com/dubhacks/status/1183494524753960960?s=21)|
 |4/20/2018|WWDC 2018 Scholarship||
 |3/25/2018|Hack.UVA 2018|Winner - Best Use of SafeTrek API|
@@ -29,7 +30,7 @@ Sophomore at Paul G. Allen School of Computer Science and Engineering.
 
 ## Recommendations
 
-So I went back to Oakton High School after graduation to pick up my Cyber Security Club (which is now merged with Computer Science Club as CSCS Club) t-shirt, the club mentor (Mr. Larson) gave me this half sheet of paper. He told me how teachers nominated me for the Faculty Awards by writing these:
+Right after graduating from Oakton High School, I went back to pick up my Cyber Security Club (which now merged with Computer Science Club to form CSCS Club) t-shirt. The club mentor (Mr. Larson) gave me a half sheet of paper and told me how teachers nominated me for the Faculty Awards by writing these testimonials:
 
 > Apollo is one of the most respectful students I have ever encountered. He is eager to learn and to better himself. He is most deserving of this award.
 
@@ -51,7 +52,7 @@ fun fact(x : int) =
     (* TODO: tail recursion *)
 ```
 
-Well, not that kind of `fun fact`. But you probably wanna ask me, "why Apollonian?" During the first year of my middle school, I tried to manually copy all CS related terms from the New Oxford American Dictionary to a notebook. I discovered the word "Apollonian," thought about what my name "Apollo" means, and kept it to remind me the person I shall become. (You might see me using the variant ending in nyan 🐾, too).
+Well, not that kind of `fun fact`. I tried to copy all CS related terms from the New Oxford American Dictionary to a notebook in 7th grade. During the process, I discovered the word "Apollonian." It helped me rethink the meaning of the my name "Apollo," and reminds me of the person I shall become. (You might see me using the variant ending in nyan 🐾, too).
 
 {% blockquote New Oxford American Dictionary %}
 1. Relating to the god Apollo.
