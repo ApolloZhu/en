@@ -6,16 +6,14 @@ tags:
 categories:
   - U6C61
 date: 2020-12-10 16:42:48
-abstract: "There's an easter egg within <a href=\"https://www.twilio.com/quest\" target=\"_blank\">TwilioQuest</a>. Your first hint is: \"hit the nail on the head.\""
-message: "<strong>SpOiLeR aLeRt</strong>: before I reveal how I found the easter egg, I strongly recommend you to try this yourself to see if you can \"<a href=\"https://github.com/education/github-university-2020\" target=\"_blank\">hit the nail on the head</a>.\" When you are ready, use the password \"<strong><em>Adventure</em></strong>\" (without the quotes) below to unlock:"
-password: Adventure
+updated: 2022-01-01 18:00:00
 ---
 
-{% note warning %}
-I wanted the adorable [Octoplush](https://github.myshopify.com/products/octoplush) for so long, and [it's finally on the way](https://www.twitch.tv/videos/832648555)!
+During the [GitHub Universe 2020](https://github.com/education/github-university-2020), I answered the call to an adventure:
 
-![Octoplush is a cuddly Octocat](https://cdn.shopify.com/s/files/1/0051/4802/products/Octoplush_d76ba290-d65b-40b9-a675-cfc3afa76b6e_large.JPG)
-{% endnote %}
+> There's an easter egg within [TwilioQuest](https://www.twilio.com/quest). Your first hint is: "hit the nail on the head."
+
+<!-- more -->
 
 ## A "Slight" Detour
 
@@ -62,6 +60,12 @@ What game, written by Warren Robinett, is credited as having the first-ever east
 {% endnote %}
 
 Thanks to the Internet and technologies we have today, this should be a simple question to answer.
+
+{% note warning %}
+I wanted the adorable [Octoplush](https://github.myshopify.com/products/octoplush) for so long, and [it's finally on the way](https://www.twitch.tv/videos/832648555)!
+
+![Octoplush is a cuddly Octocat](https://cdn.shopify.com/s/files/1/0051/4802/products/Octoplush_d76ba290-d65b-40b9-a675-cfc3afa76b6e_large.JPG)
+{% endnote %}
 
 ## cont.
 
