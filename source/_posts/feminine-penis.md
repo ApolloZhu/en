@@ -17,7 +17,7 @@ While answering "Are Traps Gay?", *Misinformed* claimed that the term [feminine 
 
 ## Linguistics
 
-While studying LING 200: Introduction To Linguistics, I learned that:
+I learned from LING 200: Introduction To Linguistics that:
 
 {% centerquote %}
 
