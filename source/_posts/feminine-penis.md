@@ -1,6 +1,6 @@
 ---
 mathjax: true
-title: Feminine Penis
+title: Somewhat Academic Study of Feminine Penis
 tags:
   - linguistics
 categories:
@@ -17,7 +17,7 @@ While answering "Are Traps Gay?", *Misinformed* claimed that the term [feminine 
 
 ## Linguistics
 
-I learned from LING 200: Introduction To Linguistics that:
+I learned from LING 200 - Introduction To Linguistics that:
 
 {% centerquote %}
 
@@ -48,4 +48,4 @@ It appears that people use the pronoun "she" for ships and countries (even "æˆ‘ç
 
 ---
 
-Oh, and [it's only 2.19% gay](https://www.youtube.com/watch?v=TPtdJTrLNHw)/[homosexual (as in the earliest reference I can find)](https://www.hltv.org/forums/threads/1444379/traps-arent-gay).
+Oh, and [it's only 2.19% gay](https://www.youtube.com/watch?v=TPtdJTrLNHw)/[homosexual (wording used in the earliest reference I can find)](https://www.hltv.org/forums/threads/1444379/traps-arent-gay).
