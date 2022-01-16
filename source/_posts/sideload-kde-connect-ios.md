@@ -17,7 +17,7 @@ For general audience, please use the official App Store/[TestFlight](https://tes
 
 {% note warning %}
 
-This is intended for contributors outside of K Desktop Environment e.V. development group to test their code before opening a merge request on a physical device. This process should theoretically work even if you don't have a paid Apple Developer account, though I've never tested.
+This is intended for contributors outside of K Desktop Environment e.V. development group to test their code on a physical device before opening a merge request. This process should theoretically work even if you don't have a paid Apple Developer account, though I've never tested.
 
 {% endnote %}
 
@@ -45,7 +45,7 @@ THE INSTRUCTION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IM
    codesign -d --entitlements entitlements.plist -f -s "Apple Development: YOUR NAME (TEAM)" $build
    ```
 4. Place the `KDE Connect.app` in a folder named `Payload`, zip the `Payload` folder, and (re)name it `KDE Connect.ipa`
-5. Use apps like Sideloadly to install `KDE Connect.ipa` on your own physical device for testing
+5. Install self-signed `KDE Connect.ipa` on your own physical device for testing (requires jailbreaking or apps like Sideloadly)
 
 ## References
 
