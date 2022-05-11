@@ -9,7 +9,7 @@ date: 2022-01-15 21:00:42
 
 {% note success %}
 
-For general audience, please use the official App Store/[TestFlight](https://testflight.apple.com/join/vxCluwBF) releases.
+For general audience, please use the official [App Store](https://apps.apple.com/app/kde-connect/id1580245991)/[TestFlight](https://testflight.apple.com/join/vxCluwBF) releases.
 
 {% endnote %}
 
@@ -27,7 +27,7 @@ THE INSTRUCTION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IM
 
 {% endnote %}
 
-1. Download KDE Connect iOS source code from KDE Invent
+1. Download KDE Connect iOS source code from [GitHub mirror](https://github.com/KDE/kdeconnect-ios)/[KDE Invent](https://invent.kde.org/network/kdeconnect-ios)
 2. Open `KDE Connect.xcodeproj` in Xcode
    1. In `Build Settings` for target `KDE Connect`, delete `Code Signing Entitlements` (but do not delete the entitlements file)
    2. In `Singing & Capabilities` for target `KDE Connect`, change the `Team` and `Bundle Identifier` so the project builds for `Any iOS Device`.
