@@ -20,9 +20,7 @@ document.addEventListener('page:loaded', () => {
       this.page.url = CONFIG.page.permalink;
       this.page.identifier = CONFIG.page.path;
       this.page.title = CONFIG.page.title;
-      if (CONFIG.disqus.i18n.disqus !== 'disqus') {
-        this.language = CONFIG.disqus.i18n.disqus;
-      }
+      this.language = 'en';
     };
     NexT.utils.loadComments('#disqus_thread').then(() => {
       if (window.DISQUS) {
