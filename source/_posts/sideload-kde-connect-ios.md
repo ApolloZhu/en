@@ -1,7 +1,7 @@
 ---
 title: Sideload KDE Connect iOS
 tags:
-  - KDE
+  - kde
   - KDE Connect
 categories:
   - Programming
