@@ -102,12 +102,11 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ### RSS
 plugin:
-- hexo-generator-feed
-#### Feed Atom
+- hexo-feed
+#### Feed
 feed:
-  type: atom
-  path: atom.xml
-  limit: 0
+  tag_dir: "tags"
+  category_dir: "categories"
 
 ## Themes: https://hexo.io/themes/
 theme: next
