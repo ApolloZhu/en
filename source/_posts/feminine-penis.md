@@ -9,6 +9,7 @@ date: 2022-01-01 16:40:33
 abstract: "While answering “Are Traps Gay?”, <em>Misinformed</em> claimed that the term <a href=\"https://youtu.be/2pSshx4VHOY?t=372\" target=\"_blank\">feminine penis doesn't make sense</a>. Or does it?"
 message: "Nothing explicit, but type “Continue” to read more."
 password: Continue
+theme: shrink
 ---
 
 While answering "Are Traps Gay?", *Misinformed* claimed that the term [feminine penis doesn't make sense](https://youtu.be/2pSshx4VHOY?t=372). Or does it?
