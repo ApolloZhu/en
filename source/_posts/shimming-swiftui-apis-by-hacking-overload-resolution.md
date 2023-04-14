@@ -47,7 +47,7 @@ One way to solve this is to "bring the new APIs to an older environment, using o
 Other common terms that describes this are "backport" and "polyfill."
 {% endnote %}
 
-While libraries like [SwiftUI Backports](https://github.com/shaps80/SwiftUIBackports) exists, there are still times that we need to do this ourselves if the library hasn't gotten to the thing we want, such as support for `@FocusState` on iOS 14. In addition, to make it easier to later drop support for older iOS versions, it's possible -- and the easiest -- for in house wrapper/implementation to **"abuse" overload resolution** to keep the shim API exactly the same as SwiftUI at call sites. This means, instead of needing to add some disambiguator like in [this blog post](https://davedelong.com/blog/2021/10/09/simplifying-backwards-compatibility-in-swift/):
+While libraries like [SwiftUI Backports](https://github.com/shaps80/SwiftUIBackports) exists, there are still times that we need to do this ourselves if the library hasn't gotten to the thing we want, such as support for `@FocusState` on iOS 14. In addition, to make it easier to later drop support for older iOS versions, it's possible -- and the easiest -- for in house wrapper/implementation to utilize **overload resolution** to keep the shim API exactly the same as SwiftUI at call sites. This means, instead of needing to add some disambiguator like in [this blog post](https://davedelong.com/blog/2021/10/09/simplifying-backwards-compatibility-in-swift/):
 
 ```swift
 @Backport.FocusState var isFocused
