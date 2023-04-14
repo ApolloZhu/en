@@ -9,7 +9,8 @@ categories:
 date: 2023-04-13 23:52:50
 ---
 
-The best way to build an app is with Swift and SwiftUI -- if you don't have to support older iOS versions. <!-- more -->
+The best way to build an app is with Swift and SwiftUI -- if you don't have to support older iOS versions.
+But it doesn't have to be like this with one weird little trick. <!-- more -->
 
 ## Motivation
 
