@@ -9,7 +9,9 @@ categories:
 date: 2023-04-13 23:52:50
 ---
 
-The best way to build an app is with Swift and SwiftUI -- if you don't have to support older iOS versions. But it doesn't have to be like this -- with one weird little trick. <!-- more -->
+The best way to build an app is with Swift and SwiftUI -- if you don't have to support older iOS versions. But it doesn't have to be like this -- with one weird little trick.
+
+<!-- more -->
 
 ## Motivation
 
@@ -63,7 +65,7 @@ or using a different name such as in [this YouTube video](https://www.youtube.co
 view.myRefreshable { ... }
 ```
 
-the goal is directly write:
+the goal is to directly write:
 
 ```swift
 @FocusState var isFocused
@@ -83,7 +85,7 @@ When multiple types, functions, and/or variables from different modules share th
 > 4. Every source file implicitly imports the core standard library as a non-selective import.
 > 5. If the name refers to a function, normal overload resolution may resolve ambiguities.
 
-That means we could provide shims by declaring:
+That means we could provide shims by declaring, for example:
 
 1. a type alias called `FocusState` to shadow SwiftUI's definition of `FocusState` type
 
@@ -96,7 +98,7 @@ typealias FocusState = State
 ```swift
 func Button(
   _ titleKey: LocalizedStringKey,
-  role: _ButtonRole? = nil,
+  role: _Button.Role? = nil,
   action: @escaping () -> Void
 ) -> _Button {
   ...
@@ -114,7 +116,7 @@ extension View {
 }
 ```
 
-Since these are "Declarations from other files in the same module," they are "better" than declarations from imported SwiftUI framework. As they are available on iOS 14, the compiler will happy take these shims over the actual SwiftUI APIs.
+Since these are "Declarations from other files in the same module," they are "better" than declarations imported from the SwiftUI framework. As they are available on iOS 14, the compiler will happy take these shims over the actual SwiftUI APIs.
 
 ## Migration
 
