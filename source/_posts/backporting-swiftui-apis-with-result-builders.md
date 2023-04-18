@@ -120,7 +120,13 @@ Because code annotated with the `ViewBuilder` attribute doesn't follow how Swift
 
 ### Differences Between iOS 14 and iOS 15 API
 
-While the iOS 15 API allows arbitrary views as the list of `actions`, the iOS 14 API requires either no buttons, a single dismiss button, or a primary and a secondary button. This is fine as `ViewBuilder`'s `buildBlock` function returns a `TupleView`, from which we can extract the buttons to pass to iOS 14's API. However, the bigger problem is that `ButtonRole` is only available on iOS 15 and we can't peek inside SwiftUI's `Button` `struct` to figure out what role it has -- nor can we do so on iOS 14 where the `ButtonRole` type doesn't exist. Thus, we'll need our own type to store relevant information then later convert it to `Button` on iOS 15 and `Alert.Button` on iOS 14:
+While the iOS 15 API allows arbitrary views as the list of `actions`, the iOS 14 API requires either
+
+1. no buttons,
+2. a single dismiss button, or
+3. a primary and a secondary button.
+
+This is fine as `ViewBuilder`'s `buildBlock` function returns a `TupleView`, from which we can extract the buttons to pass to iOS 14's API. However, the bigger problem is that `ButtonRole` is only available on iOS 15 and we can't peek inside SwiftUI's `Button` `struct` to figure out what role it has -- nor can we do so on iOS 14 where the `ButtonRole` type doesn't exist. Thus, we'll need our own type to store relevant information then later convert it to `Button` on iOS 15 and `Alert.Button` on iOS 14:
 
 ```swift
 struct _Button {
