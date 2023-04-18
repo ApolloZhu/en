@@ -68,7 +68,9 @@ extension View {
 
 But wait, what is `AlertActionBuilder`? To understand why we need to introduce this new thingy, let's first look at what's `ViewBuilder`, and why we can't use `ViewBuilder` for our purpose.
 
-### ViewBuilder
+## Detailed Design
+
+### `ViewBuilder`
 
 The new iOS 15 SwiftUI alert API is defined as follows:
 
@@ -103,7 +105,7 @@ var buttons: some View {  // Function declares an opaque return type,
 }
 ```
 
-However, by annotating it with SwiftUI's custom `ViewBuilder` attribute, the code now compiles by building a combined result after getting transformed using [rules specified by `ViewBuilder`](https://developer.apple.com/documentation/swiftui/viewbuilder#building-content), which the final result is then [implicitly returned](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties/#Shorthand-Getter-Declaration):
+However, by annotating it with SwiftUI's custom `ViewBuilder` attribute, the code now compiles by building a combined result after getting transformed using [rules specified by `ViewBuilder`](https://developer.apple.com/documentation/swiftui/viewbuilder#building-content), which the final result made using its `buildBlock` function is then [implicitly returned](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties/#Shorthand-Getter-Declaration):
 
 ```swift
 @ViewBuilder
@@ -114,7 +116,7 @@ var buttons: some View {
 }
 ```
 
-Because code annotated with the ViewBuilder attribute doesn't follow how Swift code normally gets compiled, it's kind of like a miniature language within Swift specialized for constructing views from closures (i.e. things within braces). We call this kind of language a **Domain Specific Language**, or **DSL**.
+Because code annotated with the `ViewBuilder` attribute doesn't follow how Swift code normally gets compiled, it's kind of like a miniature language within Swift specialized for constructing views from closures (i.e. things within braces). We call this kind of language a **Domain Specific Language**, or **DSL**.
 
 ### Differences Between iOS 14 and iOS 15 API
 
@@ -138,7 +140,7 @@ struct _Button {
 }
 ```
 
-### Making AlertActionBuilder - a DSL for Building Alert Actions
+### Making `AlertActionBuilder` - a DSL for Building Alert Actions
 
 Making a DSL in Swift using result builder is very simple: declaring a new type and annotate it with the `resultBuilder` attribute, then provide at least one static `buildBlock`/`buildPartialBlock` method:
 
