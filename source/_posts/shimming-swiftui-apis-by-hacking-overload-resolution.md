@@ -24,14 +24,14 @@ if #available(iOS 15, *) {
       primaryButton
       secondaryButton
     } message: {
-      someText
+      subtitle
     }
 } else {
   theSameActualViewContent
     .alert(isPresented: isPresented) {
       Alert(
         title: title,
-        message: someText,
+        message: subtitle,
         primaryButton: primaryButton,
         secondaryButton: secondaryButton
       )
@@ -129,3 +129,7 @@ typealias FocusState = State
 ```
 
 Since the backport implementation is different from SwiftUI, always test the app to make sure other parts of the code base are not relying on shim-specific behaviors.
+
+## Further Readings
+
+But how do you implement the new alert API on iOS 14? Find out more at {% post_link backporting-swiftui-apis-with-result-builders %}.
