@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>AZ • Posts by &#34;wwdc&#34; tag</title>
+        <link>https://ApolloZhu.github.io/en</link>
+        <description>Beyond the sky, into the nyaamament</description>
+        <language>en</language>
+        <pubDate>Mon, 11 Jun 2018 10:57:09 +0000</pubDate>
+        <lastBuildDate>Mon, 11 Jun 2018 10:57:09 +0000</lastBuildDate>
+        <category>music</category>
+        <category>literature</category>
+        <category>anime</category>
+        <category>chemistry</category>
+        <category>Java</category>
+        <category>APCSA</category>
+        <category>kde</category>
+        <category>KDE Connect</category>
+        <category>WWDC18</category>
+        <category>WWDC</category>
+        <category>Stanford</category>
+        <category>linguistics</category>
+        <category>Swift</category>
+        <category>git</category>
+        <category>GitHub</category>
+        <category>Twilio</category>
+        <category>philosophy</category>
+        <item>
+            <guid isPermalink="true">https://apollozhu.github.io/en/2018/06/11/computer-science-education/</guid>
+            <title>The Past, Present, and Future of Computer Science Education in Virginian High Schools</title>
+            <link>https://apollozhu.github.io/en/2018/06/11/computer-science-education/</link>
+            <category>Java</category>
+            <category>APCSA</category>
+            <category>WWDC18</category>
+            <category>WWDC</category>
+            <pubDate>Mon, 11 Jun 2018 10:57:09 +0000</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;p&gt;Before we start, let me ask you a question: For the public high schools of Fairfax County in Virginia, approximately what percentage of them do not have any computer science related courses?&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;p&gt;You might guess it would be around 15% or 25%, but what if I told you that &lt;em&gt;&lt;strong&gt;half&lt;/strong&gt;&lt;/em&gt; of the FCPS high school students can’t learn programming at school? With the introduction of self-driving automobiles and all the developments in machine learning and artificial intelligence, the availability of these related courses should be front and center. Not only because some students may want to learn how to write those apps, but also the requirement for more and more employees in various sectors to have computer skills.&lt;/p&gt;
+&lt;p&gt;Therefore, Virginian high schools should prioritize funding for computer science programs of cutting-edge technologies by updating current curriculums, supplementing new courses, and training more competent teachers to best meet the job market demands.&lt;/p&gt;
+&lt;h2 id=&#34;a-sneak-peak-at-the-history&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#a-sneak-peak-at-the-history&#34;&gt;&lt;/a&gt; A Sneak Peak at the History&lt;/h2&gt;
+&lt;p&gt;The first computer was invented in the United States, but do you know what’s more fascinating? The growth of computer-related jobs. According to the report from the Bureau of Labor Statistics of the U.S. Department of Labor, there has been a continuously rising demand for computer scientists, even during the recession period between 2007 and 2009. Not only is it independent of the current economic trends, the job outlook for these fields predicted by the report is very promising. In the upcoming 10 years, there will be 24% more jobs for software developers and 28% more for information security analysts. That is 3 or even 4 times the 7% average increase of all jobs.&lt;/p&gt;
+&lt;p&gt;So do we not have any CS courses offered at high schools? Well, we do. The AP Computer Science A class regulated by the College Board is one of them. Unlike the other courses designed by high schools, APCSA has been updated several times to reflect the changes in the current trends. Initially, back in 1984, this class teaches students Pascal. Then in 1999, they decided to switch to C++, and later in 2003, they switched to Java, the top language used across all computer programs. However, they did not update the curriculum since 2014 to reflect the major changes in the Java programming languages, and basically, the students are now learning the wrong “facts.” The outdated materials frustrate students and require students to do much more work than they need if they know about the recent changes. It’s like you could get your hands on an iPhone X, but you have to stick with a slow iPhone 6 without even your battery replaced.&lt;/p&gt;
+&lt;p&gt;Indeed, some of the high schools already have a variety of programming classes offered for students of different levels. For example, Oakton High School, a typical public high schools in Fairfax County, Virginia, teaches Information Systems, Programming, Webpage Development, APCS A and Principles, and the advanced variants for some of these classes. They provide students with many choices, but none of them teach students the new skills that tech companies are looking for.&lt;/p&gt;
+&lt;p&gt;Let’s look at the web development class. Its textbook teaches students how to use XHTML, which is known for its poor compatibility and had been abandoned a long time ago. The current industrial standard is HTML 5, with much more powerful features and straightforward “grammar.” Concerned, I asked the teacher how the county plans to update the course curriculum. The teacher — Larson — gave me an unexpected answer. They are taking it away sooner rather than later, for they believe students are not interested in it and the class itself is too hard. I think the county doesn’t really understand why the students are not signing up for that class. While the difficulty might be one of the reasons, the main cause is likely that the class really is not sufficient to prepare them for their future jobs.&lt;/p&gt;
+&lt;p&gt;Even worse, around 50% of the FCPS high schools don’t offer a single computer science class. Sharon Wu is a current member of the Career and Technical Education Advisory Committee. She said, in fact, FCPS has no budget to hire more CS professionals or offer more classes. Even at Thomas Jefferson High School for Science and Technology, one of the top-ranked high schools in Virginia, students are seeking summer programs because “school is too easy and no advanced stuff is taught in class.”&lt;/p&gt;
+&lt;h2 id=&#34;whats-happening-now&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#whats-happening-now&#34;&gt;&lt;/a&gt; What’s Happening Now?&lt;/h2&gt;
+&lt;p&gt;Maybe these issues aren’t important in the first place — students do not realize how important it is for them to be able to use a computer. Many high school students these days are obsessed with smartphones, but at the same time, they don’t know how to use a computer. The school libraries have to teach them how to find the most relevant sources in the databases, the tech office has to help them connect to the school Wi-Fi, and some even need help with using word processing softwares to complete their assignments.That’s because they don’t know what they can do with computers and programming. Students who do know are taking classes on their own to acquire knowledge for brighter futures. These motivated students are willing to do regardless of the consequences, whether it means traveling to a local college on a regular basis or giving up some of their homework time. I do the same, and for me, the motivation came from Masako Wakamiya. She is an 82-year-old Japanese woman who learned programming on her own after retirement. She made several apps to teach people traditional culture and handkerchief making. She proved to me — and the world — that everyone, no matter their gender, age, or race, can master programming. Then could we utilize the skills as our “wings” in daily life, exploring a wider world that we could not have imagined before.&lt;/p&gt;
+&lt;p&gt;However, we do want to have support from our schools. Students were really excited when Oakton (for example) announced the new Cyber Security elective.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/10842684/46906595-f47c2c80-ced3-11e8-984e-5ba26a913e12.jpg&#34; alt=&#34;Students trying to penetrate into the classroom.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The information session was crowded with students of all grade levels. The room couldn’t fit them all, so many just stood outside, trying to grasp any information they could hear. This is an exciting change, but with it comes more problems to solve. Too many students sign up for this class and the teacher, Mr. Larson, will need to balance out his schedule with all other programming classes. Even after taking out the webpage development class, he still needs help from another teacher. Without an increase in funding qualified teachers, some students will need to take their alternative instead.&lt;/p&gt;
+&lt;h2 id=&#34;warningtodo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#warningtodo&#34;&gt;&lt;/a&gt; #warning(TODO)&lt;/h2&gt;
+&lt;p&gt;We could do nothing, but what we can at least try to resolve these issues?&lt;/p&gt;
+&lt;p&gt;The most apparent solution is to use up-to-date materials in class. This will not be as easy as it sounds. Textbooks might need to be replaced more frequently than those for other subjects, teachers need to spend more time planning their classes to incorporate the new materials. In case there isn’t a textbook ready for use, teachers can consult other free, but at the same time professional, resources online. For example, the authors of The Swift Programming Language ebook are constantly updating it to demonstrate the new features and replacing examples used in the book with more relevant ones. Is this too hard? Maybe, but the AP US History exam was modified almost immediately after the 2017 AP Exam. If the history teachers can handle the changes, I believe our Computer Science teachers can do the same.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/10842684/46906599-f7771d00-ced3-11e8-9712-2995d94ac2d2.png&#34; alt=&#34;A map from code.org showing the states that require all high schools to have CS classes.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Virginia already allows rigorous computer science courses to satisfy core high school graduation requirement and allocates funding specifically to computer science, but we can push this further. The state can make computer science fundamental to K-12 education. Congress’ 2018 budget has dedicated $50 million per year for STEM and the new grant guidelines prioritize funding for computer science in schools. With that and the state standards for computer science education, we can require all schools to teach computer science in Virginia.&lt;/p&gt;
+&lt;p&gt;If all of our future generations can learn how to use the state-of-the-art technologies, they’ll be able to use programming to&lt;/p&gt;
+&lt;blockquote class=&#34;blockquote-center&#34;&gt;
+&lt;p style=&#34;font-size: 1.3em;font-weight:bold&#34;&gt;Create a world like no one has seen before.&lt;/p&gt;
+&lt;p&gt;— &lt;em&gt;Danielle Feinberg, Director of Photography for Lighting at Pixar&lt;/em&gt;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;side-notesreferences&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#side-notesreferences&#34;&gt;&lt;/a&gt; Side Notes/References&lt;/h2&gt;
+&lt;p&gt;Danielle Feinberg and her team use &lt;strong&gt;programming&lt;/strong&gt; to generate the astonishing scenes we see in Pixar &lt;strong&gt;movies&lt;/strong&gt;, such as the Marigold Bridge in Coco and the Scottish forests in Brave. For more, see WWDC18 lunch session &lt;em&gt;The Art of Science: Bringing Pixar’s Imagined Worlds to Life&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://Code.org&#34;&gt;Code.org&lt;/a&gt; is always trying to expand CS education to more students. Their &lt;a href=&#34;https://docs.google.com/document/d/15zBdBbXUA-yEzxEq0VeWAEb9nXuGjmNFWNrYp6UdM8U/edit&#34;&gt;email&lt;/a&gt; directed me to a &lt;a href=&#34;https://code.org/files/Making_CS_Fundamental.pdf&#34;&gt;solution&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Dr. Wu really helped me a lot, and I’m looking forward to continue working with her. And thanks to Mr. Lau and Mr. Larson of Oakton High School in giving me insights of the difficulties and realities the teachers face, allowing me to analyze the issues from a different perspective.&lt;/p&gt;
+&lt;p&gt;I highly recommend you to check out the YouTube video “&lt;a href=&#34;https://www.youtube.com/watch?v=gUjXiYtOC7Y&#34;&gt;Now Is the Time to Get Your Own Wings&lt;/a&gt;” by Wasako Wakamiya. It’s definitely not a story you can hear about every day.&lt;/p&gt;
+&lt;p&gt;Other information is from the National Science Foundation (College Board), and the US Department of Labor.&lt;/p&gt;
+&lt;p&gt;Thanks to editor &lt;a href=&#34;https://www.uscecc.org/wuzup-team-bio&#34;&gt;Jiachen Sun&lt;/a&gt; for revising my &lt;a href=&#34;https://medium.com/@Apollonian/the-past-present-and-future-of-cs-education-in-virginia-high-schools-88b892d8c320&#34;&gt;crappy first draft posted on Medium&lt;/a&gt;. This polished version is also available through &lt;a href=&#34;https://www.uscecc.org/computer-science-education&#34;&gt;Wuz Up!&lt;/a&gt;, a multi-cultural group aimed at teaching newcomers about American culture, values, and lifestyle.&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://apollozhu.github.io/en/2018/03/15/wwdc18-scholarships-info/</guid>
+            <title>WWDC18 Scholarships Information</title>
+            <link>https://apollozhu.github.io/en/2018/03/15/wwdc18-scholarships-info/</link>
+            <category>WWDC18</category>
+            <category>WWDC</category>
+            <category>Swift</category>
+            <pubDate>Thu, 15 Mar 2018 19:42:39 +0000</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;/2018/03/15/wwdc18-scholarships-info/&#34;&gt;阅读中文版本&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;details&gt;
+&lt;summary&gt;Wait, before we start, what is WWDC?&lt;/summary&gt;
+&lt;p&gt;I’ll add my description soon, but for now, check out the &lt;a href=&#34;https://developer.apple.com/wwdc&#34;&gt;official website&lt;/a&gt;.&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;Thank you all for being interested in &lt;a href=&#34;https://developer.apple.com/wwdc&#34;&gt;Apple’s Worldwide Developer Conference&lt;/a&gt; and &lt;a href=&#34;https://developer.apple.com/wwdc/scholarships/&#34;&gt;this scholarship opportunity&lt;/a&gt;. I hope all of us could go together, to learn, and have fun!&lt;/p&gt;
+&lt;p&gt;I know this article is a little bit long, but please read through this carefully before you start. If you have any questions, just ask me through messenger, or in the comment area below.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I’ll be constantly updating this, and the Chinese version is available &lt;a href=&#34;https://apollozhu.github.io/2018/03/16/wwdc18-scholarships-info-cn/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h2 id=&#34;important-dates&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#important-dates&#34;&gt;&lt;/a&gt; Important Dates&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Date&lt;/th&gt;
+&lt;th&gt;Event&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;April 1, 20:00 EDT&lt;/td&gt;
+&lt;td&gt;Submission Due&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;April 20&lt;/td&gt;
+&lt;td&gt;Announce Status&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;June 3-8&lt;/td&gt;
+&lt;td&gt;Orientation + WWDC!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;general-information&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#general-information&#34;&gt;&lt;/a&gt; General Information&lt;/h2&gt;
+&lt;p&gt;Please read the &lt;a href=&#34;https://developer.apple.com/wwdc/scholarships/&#34;&gt;description&lt;/a&gt; carefully, as well as the &lt;a href=&#34;https://developer.apple.com/wwdc/scholarships/terms/WWDC18-Scholarship-Terms-and-Conditions.pdf&#34;&gt;terms and conditions&lt;/a&gt;. In summary, you are required to write a Playground – an interactive program – that is creative and technically accomplished.&lt;/p&gt;
+&lt;h2 id=&#34;things-to-get&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#things-to-get&#34;&gt;&lt;/a&gt; Things to Get&lt;/h2&gt;
+&lt;p&gt;You do &lt;em&gt;&lt;strong&gt;NOT&lt;/strong&gt;&lt;/em&gt; need a paid Apple Developer Account. Do you know what’s better than that? You’ll get one year of Apple Developer membership if you win!&lt;/p&gt;
+&lt;p&gt;If you have a Mac, download &lt;a href=&#34;https://itunes.apple.com/app/id497799835&#34;&gt;Xcode from Mac App Store&lt;/a&gt;, or if you have an iPad, download &lt;a href=&#34;https://itunes.apple.com/app/id908519492&#34;&gt;Swift Playgrounds from App Store&lt;/a&gt;, or if you have a Windows, get a virtual machine or whatever that works.&lt;/p&gt;
+&lt;h2 id=&#34;learn-swift&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#learn-swift&#34;&gt;&lt;/a&gt; Learn Swift&lt;/h2&gt;
+&lt;p&gt;If you have an iPad, I highly recommend you to go through one of those “Learn to Code” playgrounds to get a general idea about what a legit playground should be like, in addition to the Swift programming language itself.&lt;/p&gt;
+&lt;p&gt;At the same time, everyone by now should have either an iOS device or a Mac, please open (i)Books and get &lt;em&gt;&lt;a href=&#34;https://itunes.apple.com/book/id1002622538&#34;&gt;The Swift Programming Language&lt;/a&gt;&lt;/em&gt;. You can always choose to &lt;a href=&#34;https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html&#34;&gt;read it online&lt;/a&gt; as well.&lt;/p&gt;
+&lt;p&gt;Most of you are already familiar with Java, so reading just “A Swift Tour” should be adequate for you to understand this simple programming language. For those of you never learned programming before, just scan through that, and chapter 2 (Language Guide) will answer your questions.&lt;/p&gt;
+&lt;p&gt;You do &lt;em&gt;NOT&lt;/em&gt; need to read chapter 3 (Language Reference) and 4 (Revision History).&lt;/p&gt;
+&lt;h2 id=&#34;general-stuff-to-learn&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#general-stuff-to-learn&#34;&gt;&lt;/a&gt; General Stuff to Learn&lt;/h2&gt;
+&lt;h3 id=&#34;i-want-to-write-a-2d-game&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#i-want-to-write-a-2d-game&#34;&gt;&lt;/a&gt; I Want to Write a 2D game&lt;/h3&gt;
+&lt;p&gt;You should learn &lt;a href=&#34;https://developer.apple.com/spritekit/&#34;&gt;SpriteKit&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;i-want-to-write-a-3d-game&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#i-want-to-write-a-3d-game&#34;&gt;&lt;/a&gt; I Want to Write a 3D game&lt;/h3&gt;
+&lt;p&gt;You should learn &lt;a href=&#34;https://developer.apple.com/scenekit/&#34;&gt;SceneKit&lt;/a&gt;, but I hope you’ve already had some sense of how 3D works and where to get your 3D models. A bonus for you, &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2017/605/&#34;&gt;Apple talked about using SceneKit in the iPad version of Swift Playgrounds&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;otherwise&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#otherwise&#34;&gt;&lt;/a&gt; Otherwise&lt;/h3&gt;
+&lt;p&gt;Well, &lt;a href=&#34;https://developer.apple.com/documentation/uikit&#34;&gt;UIKit&lt;/a&gt; itself can do a lot of stuff. To get started, follow &lt;a href=&#34;https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/&#34;&gt;Start Developing iOS Apps (Swift)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you have time, you may also want to have a general understanding of how &lt;a href=&#34;https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS&#34;&gt;view controllers work&lt;/a&gt;, maybe more about &lt;a href=&#34;https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/AboutTableViewsiPhone/AboutTableViewsiPhone.html&#34;&gt;table views&lt;/a&gt;, or even &lt;a href=&#34;https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html&#34;&gt;iOS Apps in general&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;more-about-playground&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#more-about-playground&#34;&gt;&lt;/a&gt; More About Playground&lt;/h2&gt;
+&lt;p&gt;No matter what, you should read the &lt;a href=&#34;https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_markup_formatting_ref/&#34;&gt;Markup Formatting Reference&lt;/a&gt;. Your Playground will look a lot better with this in conjunction with &lt;code&gt;CustomPlaygroundQuickLookable&lt;/code&gt;/&lt;code&gt;CustomPlaygroundDisplayConvertible&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;mac-xcode-and-playground&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mac-xcode-and-playground&#34;&gt;&lt;/a&gt; Mac, Xcode, and Playground&lt;/h3&gt;
+&lt;p&gt;It was first &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2014/408/&#34;&gt;introduced back in 2014&lt;/a&gt;, and later in 2015 you can use the format mentioned above to &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2015/405/&#34;&gt;author rich Playgrounds&lt;/a&gt; to better instruct your users. Here is &lt;a href=&#34;https://developer.apple.com/library/content/samplecode/StarterPlaygroundBook/Introduction/Intro.html&#34;&gt;a simple Swift Playground Book&lt;/a&gt; for you to get started, and you can also find other interesting ones from the &lt;a href=&#34;https://developer.apple.com/swift/blog/&#34;&gt;Swift Blog&lt;/a&gt;, although many of them would be outdated and require some changes for them to work.&lt;/p&gt;
+&lt;h3 id=&#34;ipad-and-swift-playgrounds&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ipad-and-swift-playgrounds&#34;&gt;&lt;/a&gt; iPad and Swift Playgrounds&lt;/h3&gt;
+&lt;p&gt;This app is first &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2016/408/&#34;&gt;introduced in 2016&lt;/a&gt; and &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2017/408/&#34;&gt;updated again last year&lt;/a&gt;. iPad Playground has many features that a normal Xcode Playground doesn’t have – Cut Scenes written in html (a great place to inform your user what’s this chapter about), cover images, vocab lists, etc. To fully utilize those features, please read the &lt;a href=&#34;https://developer.apple.com/library/content/documentation/Xcode/Conceptual/swift_playgrounds_doc_format/&#34;&gt;Playground Book Format Reference&lt;/a&gt;, and experiment with &lt;a href=&#34;https://developer.apple.com/library/content/samplecode/TalkingToTheLiveView/Introduction/Intro.html&#34;&gt;this sample&lt;/a&gt; that allows you to send messages to a Swift Playground live view and saving data to its key-value store.&lt;/p&gt;
+&lt;h2 id=&#34;analysis&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#analysis&#34;&gt;&lt;/a&gt; Analysis&lt;/h2&gt;
+&lt;p&gt;Remember that your playground will be judged offline, the program can &lt;em&gt;&lt;strong&gt;NOT&lt;/strong&gt;&lt;/em&gt; require an account for sign in, and they’ll only spend 3 minutes in judging it, so think about what you are going to do. Even without thinking I can tell you many people will be doing &lt;a href=&#34;https://developer.apple.com/arkit&#34;&gt;augmented reality&lt;/a&gt; and &lt;a href=&#34;https://developer.apple.com/coreml&#34;&gt;machine learning&lt;/a&gt;; you can not imagine how easy it is to implement those fancy but scary stuff with ARKit and Core ML. Well, try to be creative, add some graphics and audios, and incorporate some of Apple’s new technologies (even if they didn’t mention about that)…&lt;/p&gt;
+&lt;p&gt;For the first time, you are allowed to use open source frameworks (providing that you included their licenses correctly and explained why). Nonetheless, what you are going to submit is not just a normal program. I think these are some reasons why Apple prefers Playground over normal apps, and maybe you want to address some of them:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;user will be directed about what to do and informed of what is expected&lt;/li&gt;
+&lt;li&gt;it provide an interactive way for the users to &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2017/416/&#34;&gt;learn things through programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;it sparks users’ interest in coding and encourages further participation&lt;/li&gt;
+&lt;li&gt;…(many more to add)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Also, the “Beyond WWDC” essay is very important. You should explain, in 500 words, how you share your coding knowledge and enthusiasm for computer science with others. Spend some time on this and revise it several times.&lt;/p&gt;
+&lt;p&gt;However, that doesn’t mean the playground itself isn’t important. There were many amazing playgrounds, such as &lt;a href=&#34;https://www.youtube.com/watch?v=cq_zLMKB-SE&#34;&gt;this one here&lt;/a&gt;, but the quality of the &lt;a href=&#34;https://www.youtube.com/playlist?list=PLl469UE7Uwr0bdon2CvnpxmQs16qu4nkf&#34;&gt;other ones&lt;/a&gt; varies. So my suggestion is analysis why some of them got accepted and some got rejected, see if you can resonate with &lt;a href=&#34;https://itunes.apple.com/story/id1358780266&#34;&gt;former winners&lt;/a&gt;, and just try your best.&lt;/p&gt;
+&lt;p&gt;If you’d ever ask me if it’s hard, I’ll answer yes but &lt;em&gt;&lt;strong&gt;DOABLE&lt;/strong&gt;&lt;/em&gt;. Just make sure you don’t copy any others’ code – the &lt;a href=&#34;https://github.com/wwdc/2017/issues/7&#34;&gt;2048 playground&lt;/a&gt; from &lt;a href=&#34;https://github.com/wwdc/2017&#34;&gt;last year’s submissions&lt;/a&gt; was &lt;strong&gt;rejected&lt;/strong&gt; for this reason.&lt;/p&gt;
+&lt;blockquote class=&#34;blockquote-center&#34;&gt;
+&lt;p&gt;Everything is doable if you try.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mr. Lau&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+&lt;p&gt;Good luck.&lt;/p&gt;
+&lt;p&gt;– Apollo (a.k.a Zhiyu Zhu, last year’s scholarship winner for submitting &lt;a href=&#34;https://github.com/ApolloZhu/Swifty-Karel/tree/master&#34;&gt;Karel the Robot Playground&lt;/a&gt;)&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

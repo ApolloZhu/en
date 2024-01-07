@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "AZ • All posts by \"philosophy\" tag",
+    "description": "Beyond the sky, into the nyaamament",
+    "home_page_url": "https://ApolloZhu.github.io/en",
+    "items": [
+        {
+            "id": "https://apollozhu.github.io/en/2018/02/01/meaning-of-life/",
+            "url": "https://apollozhu.github.io/en/2018/02/01/meaning-of-life/",
+            "title": "Paradox, 0x00",
+            "date_published": "2018-02-01T22:44:13.000Z",
+            "content_html": "<link rel=\"stylesheet\" class=\"aplayer-secondary-style-marker\" href=\"/en/assets/css/APlayer.min.css\"><script src=\"/en/assets/js/APlayer.min.js\" class=\"aplayer-secondary-script-marker\"></script><script class=\"meting-secondary-script-marker\" src=\"/en/assets/js/Meting.min.js\"></script><blockquote class=\"blockquote-center\">\n<p>The meaning of life is to find the meaning of life.</p>\n\n</blockquote>\n<span id=\"more\"></span>\n<div class=\"note danger\"><p>error: variable used within its own initial value</p>\n</div>\n",
+            "tags": [
+                "philosophy"
+            ]
+        }
+    ]
+}

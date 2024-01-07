@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ApolloZhu.github.io/en</id>
+    <title>AZ • Posts by &#34;memex&#34; category</title>
+    <link href="https://ApolloZhu.github.io/en" />
+    <updated>2020-08-07T04:33:09.000Z</updated>
+    <category term="music" />
+    <category term="literature" />
+    <category term="anime" />
+    <category term="chemistry" />
+    <category term="Java" />
+    <category term="APCSA" />
+    <category term="kde" />
+    <category term="KDE Connect" />
+    <category term="WWDC18" />
+    <category term="WWDC" />
+    <category term="Stanford" />
+    <category term="linguistics" />
+    <category term="Swift" />
+    <category term="git" />
+    <category term="GitHub" />
+    <category term="Twilio" />
+    <category term="philosophy" />
+    <entry>
+        <id>https://apollozhu.github.io/en/2020/08/07/email-to-zhuzhiyu-at-cs-washington-edu/</id>
+        <title>Beyond the sky, into the nyaamament!</title>
+        <link rel="alternate" href="https://apollozhu.github.io/en/2020/08/07/email-to-zhuzhiyu-at-cs-washington-edu/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;p&gt;Congratulations.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;p&gt;I know you have so many questions and concerns about future. You used to think you know what exactly you want to study, but as you learned more (about CSE and yourself), you start to realize how little you know, and how many things you want to explore. I can’t give you an answer as to exactly what’s the right direction, but I know one thing you should always do: taking a step forward, no matter how small.&lt;/p&gt;
+&lt;p&gt;Right now, the world is quite crazy, and people are divided. You should never let negative feelings overwhelm you and widen the gap between communities. And remember, though been an effective tool, technology is not the golden key to every problem. It’s gonna be hard, but that’s fine. Just never give up.&lt;/p&gt;
+&lt;p&gt;Sincerely,&lt;br /&gt;
+Apollo | 朱智语&lt;br /&gt;
+Paul G. Allen School of Computer Science &amp;amp; Engineering&lt;br /&gt;
+University of Washington - Seattle, Class of 2023?&lt;/p&gt;
+</content>
+        <updated>2020-08-07T04:33:09.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://apollozhu.github.io/en/2018/01/30/ap-lang-quarter-3/</id>
+        <title>Freedom?</title>
+        <link rel="alternate" href="https://apollozhu.github.io/en/2018/01/30/ap-lang-quarter-3/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;blockquote&gt;&lt;p&gt;Any real change implies the breakup of the world as one has always known it, the loss of all that gave one an identity, the end of safety. And at such a moment, unable to see and not daring to imagine what the future will now bring forth, one clings to what one knew, or thought one knew; to what one possessed or dreamed that one possessed. Yet, it is only when a man is able, without bitterness or self-pity, to surrender a dream he has long cherished or a privilege he has long possessed that he is set free—he has set himself free—for higher dreams, for greater privileges.&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;James Baldwin&lt;/strong&gt;&lt;cite&gt;&lt;span style=font-style:normal&gt;“Faulkner and Desegregation”&lt;/span&gt;Nobody Knows My Name&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+</content>
+        <category term="literature" />
+        <updated>2018-01-30T15:59:49.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://apollozhu.github.io/en/2017/08/30/a-1000-times/</id>
+        <title>A 1000 Times</title>
+        <link rel="alternate" href="https://apollozhu.github.io/en/2017/08/30/a-1000-times/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;p&gt;I saw myself through the lyrics of this song, which we were asked to analyze on the first day of AP Language &amp;amp; Composition class:&lt;/p&gt;
+&lt;blockquote class=&#34;blockquote-center&#34;&gt;
+&lt;p&gt;I had a dream that you were mine&lt;br /&gt;
+I’ve had that dream a thousand times&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+    &lt;div id=&#34;aplayer-aMFcsXvq&#34; class=&#34;aplayer aplayer-tag-marker meting-tag-marker&#34;
+         data-id=&#34;468738969&#34; data-server=&#34;netease&#34; data-type=&#34;song&#34; data-mode=&#34;circulation&#34; data-autoplay=&#34;false&#34; data-mutex=&#34;true&#34; data-listmaxheight=&#34;340px&#34; data-preload=&#34;auto&#34; data-theme=&#34;#66ccff&#34;
+    &gt;&lt;/div&gt;
+</content>
+        <category term="music" />
+        <category term="literature" />
+        <updated>2017-08-30T06:37:09.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://apollozhu.github.io/en/2017/03/24/bloody-blood/</id>
+        <title>Near &amp; Blood</title>
+        <link rel="alternate" href="https://apollozhu.github.io/en/2017/03/24/bloody-blood/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;blockquote&gt;&lt;p&gt;The near in blood, the nearer bloody.&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;William Shakespeare&lt;/strong&gt;&lt;cite&gt;Macbeth&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+</content>
+        <category term="literature" />
+        <updated>2017-03-24T10:05:39.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://apollozhu.github.io/en/2017/03/24/daggers-in-smiles/</id>
+        <title>Daggers in Smiles</title>
+        <link rel="alternate" href="https://apollozhu.github.io/en/2017/03/24/daggers-in-smiles/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;blockquote&gt;&lt;p&gt;There’s daggers in men’s smiles.&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;William Shakespeare&lt;/strong&gt;&lt;cite&gt;Macbeth&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+</content>
+        <category term="literature" />
+        <updated>2017-03-24T10:05:08.000Z</updated>
+    </entry>
+</feed>

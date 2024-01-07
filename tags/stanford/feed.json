@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "AZ • All posts by \"stanford\" tag",
+    "description": "Beyond the sky, into the nyaamament",
+    "home_page_url": "https://ApolloZhu.github.io/en",
+    "items": [
+        {
+            "id": "https://apollozhu.github.io/en/2018/07/10/cs193c-memes/",
+            "url": "https://apollozhu.github.io/en/2018/07/10/cs193c-memes/",
+            "title": "JavaScript \"Memes\" from CS193C",
+            "date_published": "2018-07-10T14:55:50.000Z",
+            "content_html": "<link rel=\"stylesheet\" class=\"aplayer-secondary-style-marker\" href=\"/en/assets/css/APlayer.min.css\"><script src=\"/en/assets/js/APlayer.min.js\" class=\"aplayer-secondary-script-marker\"></script><script class=\"meting-secondary-script-marker\" src=\"/en/assets/js/Meting.min.js\"></script><h2 id=\"is-html-a-programming-language\"><a class=\"markdownIt-Anchor\" href=\"#is-html-a-programming-language\"></a> Is HTML a Programming Language?</h2>\n<blockquote><p>We’ll be using HTML, CSS, and JavaScript. JavaScript is the programming Language.</p>\n<footer><strong>Patrick Young</strong><cite>Lecture 1</cite></footer></blockquote>\n<h2 id=\"wtf-javascript\"><a class=\"markdownIt-Anchor\" href=\"#wtf-javascript\"></a> WTF, JavaScript?</h2>\n<blockquote><p>Because JavaScript is JavaScript, things can be totally wrong but still legal.</p>\n<footer><strong>Patrick Young</strong><cite>Lecture 5</cite></footer></blockquote>\n",
+            "tags": [
+                "Stanford"
+            ]
+        }
+    ]
+}

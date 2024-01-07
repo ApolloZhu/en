@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>AZ • Posts by &#34;music&#34; tag</title>
+        <link>https://ApolloZhu.github.io/en</link>
+        <description>Beyond the sky, into the nyaamament</description>
+        <language>en</language>
+        <pubDate>Wed, 30 Aug 2017 06:37:09 +0000</pubDate>
+        <lastBuildDate>Wed, 30 Aug 2017 06:37:09 +0000</lastBuildDate>
+        <category>music</category>
+        <category>literature</category>
+        <category>anime</category>
+        <category>chemistry</category>
+        <category>Java</category>
+        <category>APCSA</category>
+        <category>kde</category>
+        <category>KDE Connect</category>
+        <category>WWDC18</category>
+        <category>WWDC</category>
+        <category>Stanford</category>
+        <category>linguistics</category>
+        <category>Swift</category>
+        <category>git</category>
+        <category>GitHub</category>
+        <category>Twilio</category>
+        <category>philosophy</category>
+        <item>
+            <guid isPermalink="true">https://apollozhu.github.io/en/2017/08/30/a-1000-times/</guid>
+            <title>A 1000 Times</title>
+            <link>https://apollozhu.github.io/en/2017/08/30/a-1000-times/</link>
+            <category>music</category>
+            <category>literature</category>
+            <pubDate>Wed, 30 Aug 2017 06:37:09 +0000</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;p&gt;I saw myself through the lyrics of this song, which we were asked to analyze on the first day of AP Language &amp;amp; Composition class:&lt;/p&gt;
+&lt;blockquote class=&#34;blockquote-center&#34;&gt;
+&lt;p&gt;I had a dream that you were mine&lt;br /&gt;
+I’ve had that dream a thousand times&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+    &lt;div id=&#34;aplayer-aMFcsXvq&#34; class=&#34;aplayer aplayer-tag-marker meting-tag-marker&#34;
+         data-id=&#34;468738969&#34; data-server=&#34;netease&#34; data-type=&#34;song&#34; data-mode=&#34;circulation&#34; data-autoplay=&#34;false&#34; data-mutex=&#34;true&#34; data-listmaxheight=&#34;340px&#34; data-preload=&#34;auto&#34; data-theme=&#34;#66ccff&#34;
+    &gt;&lt;/div&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://apollozhu.github.io/en/2017/07/17/fhana-hello-my-world/</guid>
+            <title>Hello!My World!! - fhána</title>
+            <link>https://apollozhu.github.io/en/2017/07/17/fhana-hello-my-world/</link>
+            <category>music</category>
+            <category>anime</category>
+            <category>Java</category>
+            <pubDate>Mon, 17 Jul 2017 14:35:00 +0000</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Map&amp;lt;Creation&amp;gt; hello = &lt;span class=&#34;comment&#34;&gt;/*my*/&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;World&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// The Java I learned might be a fake one.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+    &lt;div id=&#34;aplayer-uGoQgClO&#34; class=&#34;aplayer aplayer-tag-marker meting-tag-marker&#34;
+         data-id=&#34;003fWrVi0rKCtE&#34; data-server=&#34;tencent&#34; data-type=&#34;song&#34; data-mode=&#34;circulation&#34; data-autoplay=&#34;false&#34; data-mutex=&#34;true&#34; data-listmaxheight=&#34;340px&#34; data-preload=&#34;auto&#34; data-theme=&#34;#66ccff&#34;
+    &gt;&lt;/div&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

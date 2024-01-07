@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ApolloZhu.github.io/en</id>
+    <title>AZ • Posts by &#34;swift&#34; tag</title>
+    <link href="https://ApolloZhu.github.io/en" />
+    <updated>2023-04-13T23:52:50.000Z</updated>
+    <category term="music" />
+    <category term="literature" />
+    <category term="anime" />
+    <category term="chemistry" />
+    <category term="Java" />
+    <category term="APCSA" />
+    <category term="kde" />
+    <category term="KDE Connect" />
+    <category term="WWDC18" />
+    <category term="WWDC" />
+    <category term="Stanford" />
+    <category term="linguistics" />
+    <category term="Swift" />
+    <category term="git" />
+    <category term="GitHub" />
+    <category term="Twilio" />
+    <category term="philosophy" />
+    <entry>
+        <id>https://apollozhu.github.io/en/2023/04/13/shimming-swiftui-apis-by-hacking-overload-resolution/</id>
+        <title>Shimming SwiftUI APIs by Hacking Overload Resolution</title>
+        <link rel="alternate" href="https://apollozhu.github.io/en/2023/04/13/shimming-swiftui-apis-by-hacking-overload-resolution/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;p&gt;The best way to build an app is with Swift and SwiftUI – if you don’t have to support older iOS versions. But it doesn’t have to be like this – with one weird little trick.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#motivation&#34;&gt;&lt;/a&gt; Motivation&lt;/h2&gt;
+&lt;p&gt;Because Swift doesn’t support back deploying types and only recently implemented &lt;a href=&#34;https://github.com/apple/swift-evolution/blob/main/proposals/0376-function-back-deployment.md&#34;&gt;SE-0376 Function Back Deployment&lt;/a&gt;, SwiftUI as a system framework can only introduce new features for the latest iOS version. As &lt;a href=&#34;https://invent.kde.org/network/kdeconnect-ios&#34;&gt;KDE Connect iOS&lt;/a&gt; needs to support iOS 14, if we want to use some of the newer SwiftUI APIs, we have to check what’s the iOS version of the current device, then execute different branches of code depending on what API is available:&lt;/p&gt;
+&lt;figure class=&#34;highlight swift&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;#available&lt;/span&gt;(&lt;span class=&#34;keyword&#34;&gt;iOS&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;15&lt;/span&gt;, &lt;span class=&#34;operator&#34;&gt;*&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  theSameActualViewContent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    .alert(title, isPresented: &lt;span class=&#34;variable&#34;&gt;$isPresented&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      primaryButton&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      secondaryButton&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125; message: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      subtitle&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125; &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  theSameActualViewContent&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    .alert(isPresented: isPresented) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;type&#34;&gt;Alert&lt;/span&gt;(&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        title: title,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        message: subtitle,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        primaryButton: primaryButton,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        secondaryButton: secondaryButton&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      )&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Not only do we have to add the &lt;code&gt;if #available&lt;/code&gt; checks, to reduce code duplication, we need to introduce variables like &lt;code&gt;theSameActualViewContent&lt;/code&gt;, &lt;code&gt;title&lt;/code&gt;, and &lt;code&gt;primaryButton&lt;/code&gt;. If we have multiple alerts, we have to repeat this process for every single one of them. The friction makes writing SwiftUI not fun anymore.&lt;/p&gt;
+&lt;h2 id=&#34;proposed-solution&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#proposed-solution&#34;&gt;&lt;/a&gt; Proposed Solution&lt;/h2&gt;
+&lt;p&gt;One way to solve this is to “bring the new APIs to an older environment, using only the means of that environment,” or implement what people call a “&lt;strong&gt;shim&lt;/strong&gt;.”&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;&lt;p&gt;Other common terms that describes this are “backport” and “polyfill.”&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;While libraries like &lt;a href=&#34;https://github.com/shaps80/SwiftUIBackports&#34;&gt;SwiftUI Backports&lt;/a&gt; exists, there are still times that we need to do this ourselves if the library hasn’t gotten to the thing we want, such as support for &lt;code&gt;@FocusState&lt;/code&gt; on iOS 14. In addition, to make it easier to later drop support for older iOS versions, it’s possible – and the easiest – for in house wrapper/implementation to utilize &lt;strong&gt;overload resolution&lt;/strong&gt; to keep the shim API exactly the same as SwiftUI at call sites. This means, instead of needing to add some disambiguator like in &lt;a href=&#34;https://davedelong.com/blog/2021/10/09/simplifying-backwards-compatibility-in-swift/&#34;&gt;this blog post&lt;/a&gt;:&lt;/p&gt;
+&lt;figure class=&#34;highlight swift&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@Backport&lt;/span&gt;.&lt;span class=&#34;type&#34;&gt;FocusState&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; isFocused&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;operator&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;view.backport.refreshable &amp;#123; &lt;span class=&#34;operator&#34;&gt;...&lt;/span&gt; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;or using a different name such as in &lt;a href=&#34;https://www.youtube.com/watch?v=2IB4CuSRea4&#34;&gt;this YouTube video&lt;/a&gt; and many other online tutorials:&lt;/p&gt;
+&lt;figure class=&#34;highlight swift&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@MyFocusState&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; isFocused&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;operator&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;view.myRefreshable &amp;#123; &lt;span class=&#34;operator&#34;&gt;...&lt;/span&gt; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;the goal is to directly write:&lt;/p&gt;
+&lt;figure class=&#34;highlight swift&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@FocusState&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; isFocused&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;operator&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;view.refreshable &amp;#123; &lt;span class=&#34;operator&#34;&gt;...&lt;/span&gt; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;as if the shim doesn’t exist.&lt;/p&gt;
+&lt;h2 id=&#34;overload-resolution&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#overload-resolution&#34;&gt;&lt;/a&gt; Overload Resolution&lt;/h2&gt;
+&lt;p&gt;When multiple types, functions, and/or variables from different modules share the same name &lt;code&gt;X&lt;/code&gt;, the compiler needs to figure out which one exactly are you referring to when you write &lt;code&gt;X&lt;/code&gt; in source code. According to Swift’s documentation on &lt;a href=&#34;https://github.com/apple/swift/blob/main/docs/Modules.rst#ambiguity&#34;&gt;resolving name lookup ambiguities&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Declarations in the current source file are best.&lt;/li&gt;
+&lt;li&gt;Declarations from other files in the same module are better than declarations from imports.&lt;/li&gt;
+&lt;li&gt;Declarations from selective imports are better than declarations from non-selective imports. (This may be used to give priority to a particular module for a given name.)&lt;/li&gt;
+&lt;li&gt;Every source file implicitly imports the core standard library as a non-selective import.&lt;/li&gt;
+&lt;li&gt;If the name refers to a function, normal overload resolution may resolve ambiguities.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That means we could provide shims by declaring, for example:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;a type alias called &lt;code&gt;FocusState&lt;/code&gt; to shadow SwiftUI’s definition of &lt;code&gt;FocusState&lt;/code&gt; type&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight swift&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;typealias&lt;/span&gt; &lt;span class=&#34;type&#34;&gt;FocusState&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;type&#34;&gt;State&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;an “overload” global function that’s similar to SwiftUI’s definition of &lt;code&gt;Button.init&lt;/code&gt; initializer but with custom types available on iOS 14&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight swift&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;Button&lt;/span&gt;(&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;params&#34;&gt;titleKey&lt;/span&gt;: &lt;span class=&#34;type&#34;&gt;LocalizedStringKey&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;params&#34;&gt;role&lt;/span&gt;: _Button.&lt;span class=&#34;type&#34;&gt;Role&lt;/span&gt;? &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;nil&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;params&#34;&gt;action&lt;/span&gt;: &lt;span class=&#34;keyword&#34;&gt;@escaping&lt;/span&gt; () -&amp;gt; &lt;span class=&#34;type&#34;&gt;Void&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;) -&amp;gt; _Button &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;operator&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;an overload function called &lt;code&gt;refreshable&lt;/code&gt; with a slightly different signature but indistinguishable from call site if using trailing closures&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight swift&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;extension&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;View&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;// This has signature refreshable(_:) while the SwiftUI one is refreshable(action:)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;refreshable&lt;/span&gt;(&lt;span class=&#34;keyword&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;params&#34;&gt;action&lt;/span&gt;: &lt;span class=&#34;keyword&#34;&gt;@escaping&lt;/span&gt; &lt;span class=&#34;meta&#34;&gt;@Sendable&lt;/span&gt; () &lt;span class=&#34;keyword&#34;&gt;async&lt;/span&gt; -&amp;gt; &lt;span class=&#34;type&#34;&gt;Void&lt;/span&gt;) -&amp;gt; &lt;span class=&#34;keyword&#34;&gt;some&lt;/span&gt; &lt;span class=&#34;type&#34;&gt;View&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;operator&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Since these are “Declarations from other files in the same module,” they are “better” than declarations imported from the SwiftUI framework. As they are available on iOS 14, the compiler will happy take these shims over the actual SwiftUI APIs.&lt;/p&gt;
+&lt;h2 id=&#34;migration&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#migration&#34;&gt;&lt;/a&gt; Migration&lt;/h2&gt;
+&lt;p&gt;What needs to happen when we drop support for iOS 14? Just delete the files implementing the shims. To make sure we remember doing this, we can mark the shim APIs to be obsolete by the iOS version they become available at:&lt;/p&gt;
+&lt;figure class=&#34;highlight swift&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;@available&lt;/span&gt;(&lt;span class=&#34;keyword&#34;&gt;iOS&lt;/span&gt;, obsoleted: &lt;span class=&#34;number&#34;&gt;15&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           message: &lt;span class=&#34;string&#34;&gt;&amp;quot;Delete this file and use SwiftUI.FocusState instead.&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;typealias&lt;/span&gt; &lt;span class=&#34;type&#34;&gt;FocusState&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;type&#34;&gt;State&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Since the backport implementation is different from SwiftUI, always test the app to make sure other parts of the code base are not relying on shim-specific behaviors.&lt;/p&gt;
+&lt;h2 id=&#34;further-readings&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#further-readings&#34;&gt;&lt;/a&gt; Further Readings&lt;/h2&gt;
+&lt;p&gt;But how do you implement the new alert API on iOS 14? Find out more at &lt;a href=&#34;/en/2023/04/17/backporting-swiftui-apis-with-result-builders/&#34; title=&#34;Backporting SwiftUI APIs with Result Builders&#34;&gt;Backporting SwiftUI APIs with Result Builders&lt;/a&gt;.&lt;/p&gt;
+</content>
+        <category term="kde" />
+        <category term="KDE Connect" />
+        <category term="Swift" />
+        <updated>2023-04-13T23:52:50.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://apollozhu.github.io/en/2018/03/15/wwdc18-scholarships-info/</id>
+        <title>WWDC18 Scholarships Information</title>
+        <link rel="alternate" href="https://apollozhu.github.io/en/2018/03/15/wwdc18-scholarships-info/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;/2018/03/15/wwdc18-scholarships-info/&#34;&gt;阅读中文版本&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;details&gt;
+&lt;summary&gt;Wait, before we start, what is WWDC?&lt;/summary&gt;
+&lt;p&gt;I’ll add my description soon, but for now, check out the &lt;a href=&#34;https://developer.apple.com/wwdc&#34;&gt;official website&lt;/a&gt;.&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;Thank you all for being interested in &lt;a href=&#34;https://developer.apple.com/wwdc&#34;&gt;Apple’s Worldwide Developer Conference&lt;/a&gt; and &lt;a href=&#34;https://developer.apple.com/wwdc/scholarships/&#34;&gt;this scholarship opportunity&lt;/a&gt;. I hope all of us could go together, to learn, and have fun!&lt;/p&gt;
+&lt;p&gt;I know this article is a little bit long, but please read through this carefully before you start. If you have any questions, just ask me through messenger, or in the comment area below.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I’ll be constantly updating this, and the Chinese version is available &lt;a href=&#34;https://apollozhu.github.io/2018/03/16/wwdc18-scholarships-info-cn/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h2 id=&#34;important-dates&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#important-dates&#34;&gt;&lt;/a&gt; Important Dates&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Date&lt;/th&gt;
+&lt;th&gt;Event&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;April 1, 20:00 EDT&lt;/td&gt;
+&lt;td&gt;Submission Due&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;April 20&lt;/td&gt;
+&lt;td&gt;Announce Status&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;June 3-8&lt;/td&gt;
+&lt;td&gt;Orientation + WWDC!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;general-information&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#general-information&#34;&gt;&lt;/a&gt; General Information&lt;/h2&gt;
+&lt;p&gt;Please read the &lt;a href=&#34;https://developer.apple.com/wwdc/scholarships/&#34;&gt;description&lt;/a&gt; carefully, as well as the &lt;a href=&#34;https://developer.apple.com/wwdc/scholarships/terms/WWDC18-Scholarship-Terms-and-Conditions.pdf&#34;&gt;terms and conditions&lt;/a&gt;. In summary, you are required to write a Playground – an interactive program – that is creative and technically accomplished.&lt;/p&gt;
+&lt;h2 id=&#34;things-to-get&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#things-to-get&#34;&gt;&lt;/a&gt; Things to Get&lt;/h2&gt;
+&lt;p&gt;You do &lt;em&gt;&lt;strong&gt;NOT&lt;/strong&gt;&lt;/em&gt; need a paid Apple Developer Account. Do you know what’s better than that? You’ll get one year of Apple Developer membership if you win!&lt;/p&gt;
+&lt;p&gt;If you have a Mac, download &lt;a href=&#34;https://itunes.apple.com/app/id497799835&#34;&gt;Xcode from Mac App Store&lt;/a&gt;, or if you have an iPad, download &lt;a href=&#34;https://itunes.apple.com/app/id908519492&#34;&gt;Swift Playgrounds from App Store&lt;/a&gt;, or if you have a Windows, get a virtual machine or whatever that works.&lt;/p&gt;
+&lt;h2 id=&#34;learn-swift&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#learn-swift&#34;&gt;&lt;/a&gt; Learn Swift&lt;/h2&gt;
+&lt;p&gt;If you have an iPad, I highly recommend you to go through one of those “Learn to Code” playgrounds to get a general idea about what a legit playground should be like, in addition to the Swift programming language itself.&lt;/p&gt;
+&lt;p&gt;At the same time, everyone by now should have either an iOS device or a Mac, please open (i)Books and get &lt;em&gt;&lt;a href=&#34;https://itunes.apple.com/book/id1002622538&#34;&gt;The Swift Programming Language&lt;/a&gt;&lt;/em&gt;. You can always choose to &lt;a href=&#34;https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html&#34;&gt;read it online&lt;/a&gt; as well.&lt;/p&gt;
+&lt;p&gt;Most of you are already familiar with Java, so reading just “A Swift Tour” should be adequate for you to understand this simple programming language. For those of you never learned programming before, just scan through that, and chapter 2 (Language Guide) will answer your questions.&lt;/p&gt;
+&lt;p&gt;You do &lt;em&gt;NOT&lt;/em&gt; need to read chapter 3 (Language Reference) and 4 (Revision History).&lt;/p&gt;
+&lt;h2 id=&#34;general-stuff-to-learn&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#general-stuff-to-learn&#34;&gt;&lt;/a&gt; General Stuff to Learn&lt;/h2&gt;
+&lt;h3 id=&#34;i-want-to-write-a-2d-game&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#i-want-to-write-a-2d-game&#34;&gt;&lt;/a&gt; I Want to Write a 2D game&lt;/h3&gt;
+&lt;p&gt;You should learn &lt;a href=&#34;https://developer.apple.com/spritekit/&#34;&gt;SpriteKit&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;i-want-to-write-a-3d-game&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#i-want-to-write-a-3d-game&#34;&gt;&lt;/a&gt; I Want to Write a 3D game&lt;/h3&gt;
+&lt;p&gt;You should learn &lt;a href=&#34;https://developer.apple.com/scenekit/&#34;&gt;SceneKit&lt;/a&gt;, but I hope you’ve already had some sense of how 3D works and where to get your 3D models. A bonus for you, &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2017/605/&#34;&gt;Apple talked about using SceneKit in the iPad version of Swift Playgrounds&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;otherwise&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#otherwise&#34;&gt;&lt;/a&gt; Otherwise&lt;/h3&gt;
+&lt;p&gt;Well, &lt;a href=&#34;https://developer.apple.com/documentation/uikit&#34;&gt;UIKit&lt;/a&gt; itself can do a lot of stuff. To get started, follow &lt;a href=&#34;https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/&#34;&gt;Start Developing iOS Apps (Swift)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you have time, you may also want to have a general understanding of how &lt;a href=&#34;https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS&#34;&gt;view controllers work&lt;/a&gt;, maybe more about &lt;a href=&#34;https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/AboutTableViewsiPhone/AboutTableViewsiPhone.html&#34;&gt;table views&lt;/a&gt;, or even &lt;a href=&#34;https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html&#34;&gt;iOS Apps in general&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;more-about-playground&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#more-about-playground&#34;&gt;&lt;/a&gt; More About Playground&lt;/h2&gt;
+&lt;p&gt;No matter what, you should read the &lt;a href=&#34;https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_markup_formatting_ref/&#34;&gt;Markup Formatting Reference&lt;/a&gt;. Your Playground will look a lot better with this in conjunction with &lt;code&gt;CustomPlaygroundQuickLookable&lt;/code&gt;/&lt;code&gt;CustomPlaygroundDisplayConvertible&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;mac-xcode-and-playground&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mac-xcode-and-playground&#34;&gt;&lt;/a&gt; Mac, Xcode, and Playground&lt;/h3&gt;
+&lt;p&gt;It was first &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2014/408/&#34;&gt;introduced back in 2014&lt;/a&gt;, and later in 2015 you can use the format mentioned above to &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2015/405/&#34;&gt;author rich Playgrounds&lt;/a&gt; to better instruct your users. Here is &lt;a href=&#34;https://developer.apple.com/library/content/samplecode/StarterPlaygroundBook/Introduction/Intro.html&#34;&gt;a simple Swift Playground Book&lt;/a&gt; for you to get started, and you can also find other interesting ones from the &lt;a href=&#34;https://developer.apple.com/swift/blog/&#34;&gt;Swift Blog&lt;/a&gt;, although many of them would be outdated and require some changes for them to work.&lt;/p&gt;
+&lt;h3 id=&#34;ipad-and-swift-playgrounds&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ipad-and-swift-playgrounds&#34;&gt;&lt;/a&gt; iPad and Swift Playgrounds&lt;/h3&gt;
+&lt;p&gt;This app is first &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2016/408/&#34;&gt;introduced in 2016&lt;/a&gt; and &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2017/408/&#34;&gt;updated again last year&lt;/a&gt;. iPad Playground has many features that a normal Xcode Playground doesn’t have – Cut Scenes written in html (a great place to inform your user what’s this chapter about), cover images, vocab lists, etc. To fully utilize those features, please read the &lt;a href=&#34;https://developer.apple.com/library/content/documentation/Xcode/Conceptual/swift_playgrounds_doc_format/&#34;&gt;Playground Book Format Reference&lt;/a&gt;, and experiment with &lt;a href=&#34;https://developer.apple.com/library/content/samplecode/TalkingToTheLiveView/Introduction/Intro.html&#34;&gt;this sample&lt;/a&gt; that allows you to send messages to a Swift Playground live view and saving data to its key-value store.&lt;/p&gt;
+&lt;h2 id=&#34;analysis&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#analysis&#34;&gt;&lt;/a&gt; Analysis&lt;/h2&gt;
+&lt;p&gt;Remember that your playground will be judged offline, the program can &lt;em&gt;&lt;strong&gt;NOT&lt;/strong&gt;&lt;/em&gt; require an account for sign in, and they’ll only spend 3 minutes in judging it, so think about what you are going to do. Even without thinking I can tell you many people will be doing &lt;a href=&#34;https://developer.apple.com/arkit&#34;&gt;augmented reality&lt;/a&gt; and &lt;a href=&#34;https://developer.apple.com/coreml&#34;&gt;machine learning&lt;/a&gt;; you can not imagine how easy it is to implement those fancy but scary stuff with ARKit and Core ML. Well, try to be creative, add some graphics and audios, and incorporate some of Apple’s new technologies (even if they didn’t mention about that)…&lt;/p&gt;
+&lt;p&gt;For the first time, you are allowed to use open source frameworks (providing that you included their licenses correctly and explained why). Nonetheless, what you are going to submit is not just a normal program. I think these are some reasons why Apple prefers Playground over normal apps, and maybe you want to address some of them:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;user will be directed about what to do and informed of what is expected&lt;/li&gt;
+&lt;li&gt;it provide an interactive way for the users to &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2017/416/&#34;&gt;learn things through programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;it sparks users’ interest in coding and encourages further participation&lt;/li&gt;
+&lt;li&gt;…(many more to add)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Also, the “Beyond WWDC” essay is very important. You should explain, in 500 words, how you share your coding knowledge and enthusiasm for computer science with others. Spend some time on this and revise it several times.&lt;/p&gt;
+&lt;p&gt;However, that doesn’t mean the playground itself isn’t important. There were many amazing playgrounds, such as &lt;a href=&#34;https://www.youtube.com/watch?v=cq_zLMKB-SE&#34;&gt;this one here&lt;/a&gt;, but the quality of the &lt;a href=&#34;https://www.youtube.com/playlist?list=PLl469UE7Uwr0bdon2CvnpxmQs16qu4nkf&#34;&gt;other ones&lt;/a&gt; varies. So my suggestion is analysis why some of them got accepted and some got rejected, see if you can resonate with &lt;a href=&#34;https://itunes.apple.com/story/id1358780266&#34;&gt;former winners&lt;/a&gt;, and just try your best.&lt;/p&gt;
+&lt;p&gt;If you’d ever ask me if it’s hard, I’ll answer yes but &lt;em&gt;&lt;strong&gt;DOABLE&lt;/strong&gt;&lt;/em&gt;. Just make sure you don’t copy any others’ code – the &lt;a href=&#34;https://github.com/wwdc/2017/issues/7&#34;&gt;2048 playground&lt;/a&gt; from &lt;a href=&#34;https://github.com/wwdc/2017&#34;&gt;last year’s submissions&lt;/a&gt; was &lt;strong&gt;rejected&lt;/strong&gt; for this reason.&lt;/p&gt;
+&lt;blockquote class=&#34;blockquote-center&#34;&gt;
+&lt;p&gt;Everything is doable if you try.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mr. Lau&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+&lt;p&gt;Good luck.&lt;/p&gt;
+&lt;p&gt;– Apollo (a.k.a Zhiyu Zhu, last year’s scholarship winner for submitting &lt;a href=&#34;https://github.com/ApolloZhu/Swifty-Karel/tree/master&#34;&gt;Karel the Robot Playground&lt;/a&gt;)&lt;/p&gt;
+</content>
+        <category term="WWDC18" />
+        <category term="WWDC" />
+        <category term="Swift" />
+        <updated>2018-03-15T19:42:39.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://apollozhu.github.io/en/2017/08/23/github-swift-style-guide-irony/</id>
+        <title>GitHub&#39;s Swift Style Guide</title>
+        <link rel="alternate" href="https://apollozhu.github.io/en/2017/08/23/github-swift-style-guide-irony/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;p&gt;When I was cleaning up my GitHub repos and stars, I found &lt;a href=&#34;https://github.com/github/swift-style-guide&#34;&gt;GitHub’s style guide for Swift&lt;/a&gt;, and I find this 2nd most starred style guide quite amusing.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;p&gt;Despite the fact that Xcode defaults to using 4 spaces for indentation (and we can clearly see the impact by checking &lt;a href=&#34;https://ukupat.github.io/tabs-or-spaces/&#34;&gt;tabs-or-spaces&lt;/a&gt;), the style guide suggests using tabs instead. I’m totally fine with that, but I can easily tell there are some disagreements among the contributors:&lt;/p&gt;
+&lt;figure class=&#34;highlight swift&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; myGreatProperty: &lt;span class=&#34;type&#34;&gt;Int&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;subscript&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;index&lt;/span&gt;: &lt;span class=&#34;type&#34;&gt;Int&lt;/span&gt;) -&amp;gt; &lt;span class=&#34;type&#34;&gt;T&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; objects[index]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;But there’s more. For now (2017 Auguest 23), there are three &lt;a href=&#34;https://github.com/github?language=swift&#34;&gt;Swift repos&lt;/a&gt; under GitHub’s &lt;a href=&#34;https://github.com/github&#34;&gt;main account&lt;/a&gt; – one source, two forks. Well, then let’s focus on &lt;a href=&#34;https://github.com/github/SoftU2F&#34;&gt;SoftU2F&lt;/a&gt;, the ONLY Swift repository GitHub actually owns. Isn’t it natural for me to expect this repo to follow GitHub’s own style guide? But ironically, even SoftU2F is &lt;em&gt;&lt;strong&gt;NOT&lt;/strong&gt;&lt;/em&gt; doing that!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://octodex.github.com/images/front-end-conftocat.png&#34; alt=&#34;The Front-End Conftocat on GitHub Octoex&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In conclusion, seems that GitHub is not interested in styling their Swift code, and thus the GitHub community (or at least the 4k stargazers) has no actual intention to follow GitHub’s style guide, too.&lt;/p&gt;
+</content>
+        <category term="Swift" />
+        <category term="git" />
+        <updated>2017-08-23T21:02:25.000Z</updated>
+    </entry>
+</feed>

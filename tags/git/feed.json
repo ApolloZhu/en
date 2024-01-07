@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "AZ • All posts by \"git\" tag",
+    "description": "Beyond the sky, into the nyaamament",
+    "home_page_url": "https://ApolloZhu.github.io/en",
+    "items": [
+        {
+            "id": "https://apollozhu.github.io/en/2017/08/23/github-swift-style-guide-irony/",
+            "url": "https://apollozhu.github.io/en/2017/08/23/github-swift-style-guide-irony/",
+            "title": "GitHub's Swift Style Guide",
+            "date_published": "2017-08-23T21:02:25.000Z",
+            "content_html": "<link rel=\"stylesheet\" class=\"aplayer-secondary-style-marker\" href=\"/en/assets/css/APlayer.min.css\"><script src=\"/en/assets/js/APlayer.min.js\" class=\"aplayer-secondary-script-marker\"></script><script class=\"meting-secondary-script-marker\" src=\"/en/assets/js/Meting.min.js\"></script><p>When I was cleaning up my GitHub repos and stars, I found <a href=\"https://github.com/github/swift-style-guide\">GitHub’s style guide for Swift</a>, and I find this 2nd most starred style guide quite amusing.</p>\n<span id=\"more\"></span>\n<p>Despite the fact that Xcode defaults to using 4 spaces for indentation (and we can clearly see the impact by checking <a href=\"https://ukupat.github.io/tabs-or-spaces/\">tabs-or-spaces</a>), the style guide suggests using tabs instead. I’m totally fine with that, but I can easily tell there are some disagreements among the contributors:</p>\n<figure class=\"highlight swift\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"keyword\">var</span> myGreatProperty: <span class=\"type\">Int</span> &#123;</span><br><span class=\"line\">\t<span class=\"keyword\">return</span> <span class=\"number\">4</span></span><br><span class=\"line\">&#125;</span><br><span class=\"line\"></span><br><span class=\"line\"><span class=\"keyword\">subscript</span>(<span class=\"params\">index</span>: <span class=\"type\">Int</span>) -&gt; <span class=\"type\">T</span> &#123;</span><br><span class=\"line\">    <span class=\"keyword\">return</span> objects[index]</span><br><span class=\"line\">&#125;</span><br></pre></td></tr></table></figure>\n<p>But there’s more. For now (2017 Auguest 23), there are three <a href=\"https://github.com/github?language=swift\">Swift repos</a> under GitHub’s <a href=\"https://github.com/github\">main account</a> – one source, two forks. Well, then let’s focus on <a href=\"https://github.com/github/SoftU2F\">SoftU2F</a>, the ONLY Swift repository GitHub actually owns. Isn’t it natural for me to expect this repo to follow GitHub’s own style guide? But ironically, even SoftU2F is <em><strong>NOT</strong></em> doing that!</p>\n<p><img src=\"https://octodex.github.com/images/front-end-conftocat.png\" alt=\"The Front-End Conftocat on GitHub Octoex\" /></p>\n<p>In conclusion, seems that GitHub is not interested in styling their Swift code, and thus the GitHub community (or at least the 4k stargazers) has no actual intention to follow GitHub’s style guide, too.</p>\n",
+            "tags": [
+                "Swift",
+                "git"
+            ]
+        }
+    ]
+}

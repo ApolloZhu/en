@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>AZ • Posts by &#34;github&#34; tag</title>
+        <link>https://ApolloZhu.github.io/en</link>
+        <description>Beyond the sky, into the nyaamament</description>
+        <language>en</language>
+        <pubDate>Thu, 10 Dec 2020 16:42:48 +0000</pubDate>
+        <lastBuildDate>Thu, 10 Dec 2020 16:42:48 +0000</lastBuildDate>
+        <category>music</category>
+        <category>literature</category>
+        <category>anime</category>
+        <category>chemistry</category>
+        <category>Java</category>
+        <category>APCSA</category>
+        <category>kde</category>
+        <category>KDE Connect</category>
+        <category>WWDC18</category>
+        <category>WWDC</category>
+        <category>Stanford</category>
+        <category>linguistics</category>
+        <category>Swift</category>
+        <category>git</category>
+        <category>GitHub</category>
+        <category>Twilio</category>
+        <category>philosophy</category>
+        <item>
+            <guid isPermalink="true">https://apollozhu.github.io/en/2020/12/10/github-university-twilio-quest-easter-egg/</guid>
+            <title>Operation Univers(ity) TwilioQuest Easter Egg</title>
+            <link>https://apollozhu.github.io/en/2020/12/10/github-university-twilio-quest-easter-egg/</link>
+            <category>GitHub</category>
+            <category>Twilio</category>
+            <pubDate>Thu, 10 Dec 2020 16:42:48 +0000</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;p&gt;During the &lt;a href=&#34;https://github.com/education/github-university-2020&#34;&gt;GitHub Universe 2020&lt;/a&gt;, I answered the call to an adventure:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There’s an easter egg within &lt;a href=&#34;https://www.twilio.com/quest&#34;&gt;TwilioQuest&lt;/a&gt;. Your first hint is: “hit the nail on the head.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h2 id=&#34;a-slight-detour&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#a-slight-detour&#34;&gt;&lt;/a&gt; A “Slight” Detour&lt;/h2&gt;
+&lt;p&gt;Since the hint is “hit the nail on the head,” I believe a lot of people have tried to “hit” everything that has even just the slightest connection to either “nail” or “head”.&lt;/p&gt;
+&lt;p&gt;Me too. I spent countless hours trying to click the head of the 2 people in the welcome screen, that of robot Cederic, the head of the Operator, and many other places. Yet, none of those worked.&lt;/p&gt;
+&lt;p&gt;Well, time to try reverse engineering. Let’s see if the source code of the app can tell us something.&lt;/p&gt;
+&lt;div class=&#34;note danger&#34;&gt;&lt;p&gt;Note: make sure you are allowed to do this by the Terms of Service / End User License Agreement.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;You can view the source code of TwilioQuest by selecting the Help menu, then Toggle Developer Tools.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/10842684/101840154-9712b300-3b11-11eb-87e7-b3001729e8d1.png&#34; alt=&#34;TwilioQuest with its source code after toggling developer tools&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;For easter eggs/hidden features, the words that I usually start to look for in source code are “easter,” “egg,” “secret,” “found,” and “congratulations.” Since the hint for this one is “hit the nail on the head”, I also tried to search for “nail,” “head,” “hit,” and “click” in all of TwilioQuest’s source files. (Somehow I can never remember how to search for all files using Chrome Developer Tools, so here’s a &lt;a href=&#34;https://stackoverflow.com/questions/37685351/chrome-devtools-search-all-javascript-files-in-website/47690078&#34;&gt;stack overflow post&lt;/a&gt; demonstrating how.) Yet, nothing of particular interest showed up in the results.&lt;/p&gt;
+&lt;h2 id=&#34;nail-in-the-head&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nail-in-the-head&#34;&gt;&lt;/a&gt; “Nail” in the &lt;code&gt;head&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;When I checked the &lt;a href=&#34;https://github.com/education/github-university-2020/commits/main/README.md&#34;&gt;modification history of the README.md file&lt;/a&gt; (to see if they have accidentally leaked something), a version of it said that “the game will let you know if you’ve qualified!” So I assumed that this must be a feature in the TwilioQuest app itself, revealed by some kind of JavaScript code / hidden chests / etc…&lt;/p&gt;
+&lt;p&gt;But what if it is not? Since &lt;a href=&#34;https://twitter.com/ekuekanshgupta&#34;&gt;Ekansh Gupta&lt;/a&gt; mentioned about opening TwilioQuest source code on Slack, we’re probably in the right place. But we’ve spent too much time looking for the clue, how could Vicdoja solve the puzzle in less than an hour after receiving the hint on Slack? It must be something that’s directly related to the hint, something obvious that we’ve been ignoring.&lt;/p&gt;
+&lt;p&gt;Well, indeed there was. There’s something that we’ve ignored so far: the &lt;code&gt;head&lt;/code&gt; HTML tag seen in the first screenshot. Because there’s no “code” in the &lt;code&gt;head&lt;/code&gt; tag, I never considered it to be the head that I was looking for. With no where else to examine, I expanded the &lt;code&gt;head&lt;/code&gt; tag by clicking that triangle to its left:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/10842684/101842641-7a2cae80-3b16-11eb-823d-b4251724b0d8.png&#34; alt=&#34;There&#39;s a comment saying follow the white rabbit with a link to GitHub gists&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We finally hit the nail on the head and can “follow the white rabbit” to continue our adventure.&lt;/p&gt;
+&lt;h2 id=&#34;more-puzzles&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#more-puzzles&#34;&gt;&lt;/a&gt; More Puzzles&lt;/h2&gt;
+&lt;script src=&#34;https://gist.github.com/kwhinnery/b3cbc250fa1df65cc3c36ca39495d486.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;The file is named “&lt;a href=&#34;https://gist.github.com/kwhinnery/b3cbc250fa1df65cc3c36ca39495d486&#34;&gt;egg.md&lt;/a&gt;” and the description says “GitHub Univers(ity),” indeed this is the easter egg that we’ve been looking for. But what could this long line of cryptic text possibly mean?&lt;/p&gt;
+&lt;p&gt;If you scroll to the end of the line, you’ll see “&lt;code&gt;==&lt;/code&gt;”. That’s a classic sign of Base64 encoded text, so I just searched for an online Base64 decoder and decoded this weird line of characters, yielding:&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;&lt;p&gt;To complete the egg hunt for GitHub Univers(ity) 2020, email &lt;a href=&#34;mailto:kwhinnery@twilio.com&#34;&gt;kwhinnery@twilio.com&lt;/a&gt; with a subject line containing [EGG HUNT], with the answer to this question:&lt;/p&gt;
+&lt;p&gt;What game, written by Warren Robinett, is credited as having the first-ever easter egg?&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Thanks to the Internet and technologies we have today, this should be a simple question to answer.&lt;/p&gt;
+&lt;div class=&#34;note warning&#34;&gt;&lt;p&gt;I wanted the adorable &lt;a href=&#34;https://github.myshopify.com/products/octoplush&#34;&gt;Octoplush&lt;/a&gt; for so long, and &lt;a href=&#34;https://www.twitch.tv/videos/832648555&#34;&gt;it’s finally on the way&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.shopify.com/s/files/1/0051/4802/products/Octoplush_d76ba290-d65b-40b9-a675-cfc3afa76b6e_large.JPG&#34; alt=&#34;Octoplush is a cuddly Octocat&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;cont&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cont&#34;&gt;&lt;/a&gt; cont.&lt;/h2&gt;
+&lt;p&gt;Although &lt;a href=&#34;https://githubuniverse.com/&#34;&gt;GitHub Universe&lt;/a&gt; 2020 is over, it’s not too late to start contributing to the open source community. Tryout “&lt;a href=&#34;https://www.twilio.com/quest/learn/open-source&#34;&gt;The Flame of Open Source&lt;/a&gt;” training mission in TwilioQuest to help you get familiar with the process, and adventure on! Together, we can save the flame of open source 🔥.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/6633808/101407837-c50eb200-38db-11eb-90ff-4888b5598de0.png&#34; alt=&#34;Operation Univers(ity), an epic journey to save the flame of open source&#34; /&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

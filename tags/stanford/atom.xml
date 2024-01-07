@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ApolloZhu.github.io/en</id>
+    <title>AZ • Posts by &#34;stanford&#34; tag</title>
+    <link href="https://ApolloZhu.github.io/en" />
+    <updated>2018-07-10T14:55:50.000Z</updated>
+    <category term="music" />
+    <category term="literature" />
+    <category term="anime" />
+    <category term="chemistry" />
+    <category term="Java" />
+    <category term="APCSA" />
+    <category term="kde" />
+    <category term="KDE Connect" />
+    <category term="WWDC18" />
+    <category term="WWDC" />
+    <category term="Stanford" />
+    <category term="linguistics" />
+    <category term="Swift" />
+    <category term="git" />
+    <category term="GitHub" />
+    <category term="Twilio" />
+    <category term="philosophy" />
+    <entry>
+        <id>https://apollozhu.github.io/en/2018/07/10/cs193c-memes/</id>
+        <title>JavaScript &#34;Memes&#34; from CS193C</title>
+        <link rel="alternate" href="https://apollozhu.github.io/en/2018/07/10/cs193c-memes/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;h2 id=&#34;is-html-a-programming-language&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#is-html-a-programming-language&#34;&gt;&lt;/a&gt; Is HTML a Programming Language?&lt;/h2&gt;
+&lt;blockquote&gt;&lt;p&gt;We’ll be using HTML, CSS, and JavaScript. JavaScript is the programming Language.&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;Patrick Young&lt;/strong&gt;&lt;cite&gt;Lecture 1&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;wtf-javascript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#wtf-javascript&#34;&gt;&lt;/a&gt; WTF, JavaScript?&lt;/h2&gt;
+&lt;blockquote&gt;&lt;p&gt;Because JavaScript is JavaScript, things can be totally wrong but still legal.&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;Patrick Young&lt;/strong&gt;&lt;cite&gt;Lecture 5&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+</content>
+        <category term="Stanford" />
+        <updated>2018-07-10T14:55:50.000Z</updated>
+    </entry>
+</feed>

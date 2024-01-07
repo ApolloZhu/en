@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ApolloZhu.github.io/en</id>
+    <title>AZ • Posts by &#34;git&#34; tag</title>
+    <link href="https://ApolloZhu.github.io/en" />
+    <updated>2017-08-23T21:02:25.000Z</updated>
+    <category term="music" />
+    <category term="literature" />
+    <category term="anime" />
+    <category term="chemistry" />
+    <category term="Java" />
+    <category term="APCSA" />
+    <category term="kde" />
+    <category term="KDE Connect" />
+    <category term="WWDC18" />
+    <category term="WWDC" />
+    <category term="Stanford" />
+    <category term="linguistics" />
+    <category term="Swift" />
+    <category term="git" />
+    <category term="GitHub" />
+    <category term="Twilio" />
+    <category term="philosophy" />
+    <entry>
+        <id>https://apollozhu.github.io/en/2017/08/23/github-swift-style-guide-irony/</id>
+        <title>GitHub&#39;s Swift Style Guide</title>
+        <link rel="alternate" href="https://apollozhu.github.io/en/2017/08/23/github-swift-style-guide-irony/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;/en/assets/css/APlayer.min.css&#34;&gt;&lt;script src=&#34;/en/assets/js/APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;/en/assets/js/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;p&gt;When I was cleaning up my GitHub repos and stars, I found &lt;a href=&#34;https://github.com/github/swift-style-guide&#34;&gt;GitHub’s style guide for Swift&lt;/a&gt;, and I find this 2nd most starred style guide quite amusing.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;p&gt;Despite the fact that Xcode defaults to using 4 spaces for indentation (and we can clearly see the impact by checking &lt;a href=&#34;https://ukupat.github.io/tabs-or-spaces/&#34;&gt;tabs-or-spaces&lt;/a&gt;), the style guide suggests using tabs instead. I’m totally fine with that, but I can easily tell there are some disagreements among the contributors:&lt;/p&gt;
+&lt;figure class=&#34;highlight swift&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; myGreatProperty: &lt;span class=&#34;type&#34;&gt;Int&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;subscript&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;index&lt;/span&gt;: &lt;span class=&#34;type&#34;&gt;Int&lt;/span&gt;) -&amp;gt; &lt;span class=&#34;type&#34;&gt;T&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; objects[index]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;But there’s more. For now (2017 Auguest 23), there are three &lt;a href=&#34;https://github.com/github?language=swift&#34;&gt;Swift repos&lt;/a&gt; under GitHub’s &lt;a href=&#34;https://github.com/github&#34;&gt;main account&lt;/a&gt; – one source, two forks. Well, then let’s focus on &lt;a href=&#34;https://github.com/github/SoftU2F&#34;&gt;SoftU2F&lt;/a&gt;, the ONLY Swift repository GitHub actually owns. Isn’t it natural for me to expect this repo to follow GitHub’s own style guide? But ironically, even SoftU2F is &lt;em&gt;&lt;strong&gt;NOT&lt;/strong&gt;&lt;/em&gt; doing that!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://octodex.github.com/images/front-end-conftocat.png&#34; alt=&#34;The Front-End Conftocat on GitHub Octoex&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In conclusion, seems that GitHub is not interested in styling their Swift code, and thus the GitHub community (or at least the 4k stargazers) has no actual intention to follow GitHub’s style guide, too.&lt;/p&gt;
+</content>
+        <category term="Swift" />
+        <category term="git" />
+        <updated>2017-08-23T21:02:25.000Z</updated>
+    </entry>
+</feed>

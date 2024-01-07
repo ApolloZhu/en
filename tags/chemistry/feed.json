@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "AZ • All posts by \"chemistry\" tag",
+    "description": "Beyond the sky, into the nyaamament",
+    "home_page_url": "https://ApolloZhu.github.io/en",
+    "items": [
+        {
+            "id": "https://apollozhu.github.io/en/2017/08/30/ap-chem-survey/",
+            "url": "https://apollozhu.github.io/en/2017/08/30/ap-chem-survey/",
+            "title": "Explosive AP Chemistry Survey",
+            "date_published": "2017-08-30T22:08:28.000Z",
+            "content_html": "<link rel=\"stylesheet\" class=\"aplayer-secondary-style-marker\" href=\"/en/assets/css/APlayer.min.css\"><script src=\"/en/assets/js/APlayer.min.js\" class=\"aplayer-secondary-script-marker\"></script><script class=\"meting-secondary-script-marker\" src=\"/en/assets/js/Meting.min.js\"></script><p><img src=\"https://user-images.githubusercontent.com/10842684/29992768-89b5b8d2-8f71-11e7-99db-116541df381a.png\" alt=\"Finish the prompt: When I think about AP Chemistry, I am excited about... Explosion! Finish the second prompt: When I think about AP Chemistry, I worry that... It actually explodes.\" /></p>\n<p><a href=\"http://konosuba.com/\"><img src=\"https://pa1.narvii.com/6354/bd84d66c323ce1eb9a4612b792c0dbba7b72a8b9_hq.gif\" alt=\"Explosion!\" /></a></p>\n",
+            "tags": [
+                "anime",
+                "chemistry"
+            ]
+        }
+    ]
+}
